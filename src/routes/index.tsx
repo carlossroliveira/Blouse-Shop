@@ -11,19 +11,12 @@ import { Signin } from '../pages/Signin';
 import { Signup } from '../pages/Signup';
 
 export const RoutesComponent = (): JSX.Element => {
-  const PrivateRoute = ({ Item }) => {
-    const isAuthenticated = true;
-
-    /* const { signed } = useAuth(); */
-
-    return isAuthenticated > 0 ? <Item /> : <Signin />;
-  };
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Signin />} />
 
-        <Route path="/home" element={<PrivateRoute Item={Home} />} />
+        <Route path="/home" element={<Home />} />
 
         <Route path="/signup" element={<Signup />} />
 

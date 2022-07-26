@@ -8,15 +8,15 @@ import React, { ComponentType } from 'react';
 // -------------------------------------------------
 import dark from '../styles/themes/dark';
 import { ThemeProvider } from 'styled-components';
-import { ThemeProviderApplication } from '../context/contextApplication/ContextTheme';
+import { AuthProvider } from '../context/AuthProvider';
 
 function WithThemeComponent<T>(Component: ComponentType<T>) {
   return (props: T): JSX.Element => {
     return (
       <ThemeProvider theme={dark}>
-        <ThemeProviderApplication>
+        <AuthProvider>
           <Component {...(props as T)} />
-        </ThemeProviderApplication>
+        </AuthProvider>
       </ThemeProvider>
     );
   };

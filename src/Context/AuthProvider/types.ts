@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-interface */
 // -------------------------------------------------
 // Packages
 // -------------------------------------------------
@@ -6,9 +5,17 @@ import { ReactNode } from 'react';
 // -------------------------------------------------
 // Types
 // -------------------------------------------------
-export interface IContextApplication {}
 
-export interface IContextApplicationProvider {
+export interface IUser {
+  email?: string;
+  token?: string;
+}
+
+export interface IContext extends IUser {
+  authenticate: (email: string, password: string) => Promise<void>;
+  logout: () => void;
+}
+
+export interface IAuthProvider {
   children: ReactNode | JSX.Element;
 }
-export interface APIInformation {}

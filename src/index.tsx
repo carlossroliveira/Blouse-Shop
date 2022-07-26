@@ -8,14 +8,14 @@ import ReactDOM from 'react-dom';
 // -------------------------------------------------
 import { App } from './App';
 import { ThemeProvider } from './context/themes/ContextTheme';
-import { ThemeProviderApplication } from './context/contextApplication/ContextTheme';
+import { AuthProvider } from './context/AuthProvider';
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>
-      <ThemeProviderApplication>
+      <AuthProvider>
         <App />
-      </ThemeProviderApplication>
+      </AuthProvider>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root'),

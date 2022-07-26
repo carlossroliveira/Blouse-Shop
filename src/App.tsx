@@ -12,17 +12,17 @@ import { useMyHook } from './context/themes/ContextTheme';
 // -------------------------------------------------
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from './styles/GlobalStyles';
-import { ThemeProviderApplication } from './context/contextApplication/ContextTheme';
+import { AuthProvider } from './context/AuthProvider';
 
 export const App = (): JSX.Element => {
   const { themes } = useMyHook();
 
   return (
     <ThemeProvider theme={themes}>
-      <ThemeProviderApplication>
+      <AuthProvider>
         <GlobalStyle />
         <RoutesComponent />
-      </ThemeProviderApplication>
+      </AuthProvider>
     </ThemeProvider>
   );
 };
