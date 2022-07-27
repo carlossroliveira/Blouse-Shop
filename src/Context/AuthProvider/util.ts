@@ -30,7 +30,7 @@ export const LoginRequest = async (email: string, password: string) => {
       password,
     });
 
-    return response.data;
+    return response?.data;
   } catch (error) {
     return null;
   }

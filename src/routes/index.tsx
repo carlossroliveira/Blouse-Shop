@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // -------------------------------------------------
 import { Protected } from '../components/Protected';
 import { LoginComponent } from '../components/LoginComponent';
+import { Profile } from '../pages/Profile';
 
 export const RoutesComponent = (): JSX.Element => {
   return (
@@ -17,12 +18,12 @@ export const RoutesComponent = (): JSX.Element => {
           path="/profile"
           element={
             <Protected>
-              <h2>OLá esse é o profile</h2>
+              <Profile />
             </Protected>
           }
         />
 
-        <Route path="/login" element={<LoginComponent />} />
+        <Route path="/" element={<LoginComponent />} />
 
         {/* <Route path="*" element={<Signin />} /> */}
       </Routes>
