@@ -6,21 +6,25 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // -------------------------------------------------
 // Components
 // -------------------------------------------------
-import { Home } from '../pages/Home';
-import { Signin } from '../pages/Signin';
-import { Signup } from '../pages/Signup';
+import { Protected } from '../components/Protected';
+import { LoginComponent } from '../components/LoginComponent';
 
 export const RoutesComponent = (): JSX.Element => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Signin />} />
+        <Route
+          path="/profile"
+          element={
+            <Protected>
+              <h2>OLá esse é o profile</h2>
+            </Protected>
+          }
+        />
 
-        <Route path="/home" element={<Home />} />
+        <Route path="/login" element={<LoginComponent />} />
 
-        <Route path="/signup" element={<Signup />} />
-
-        <Route path="*" element={<Signin />} />
+        {/* <Route path="*" element={<Signin />} /> */}
       </Routes>
     </BrowserRouter>
   );

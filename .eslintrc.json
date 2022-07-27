@@ -28,8 +28,7 @@
       "error",
       {
         "argsIgnorePattern": "^_",
-        "varsIgnorePattern": "^_",
-        "no-unused-vars": "off"
+        "varsIgnorePattern": "^_"
       }
     ]
   },

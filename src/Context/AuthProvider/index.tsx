@@ -1,7 +1,7 @@
 // -------------------------------------------------
 // Packages
 // -------------------------------------------------
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 // -------------------------------------------------
 // Types
 // -------------------------------------------------
@@ -9,12 +9,20 @@ import { IAuthProvider, IContext, IUser } from './types';
 // -------------------------------------------------
 // Util
 // -------------------------------------------------
-import { LoginRequest } from './util';
+import { getUserLocalStorage, LoginRequest, setUserLocalStorage } from './util';
 
-const AuthContext = createContext<IContext>({} as IContext);
+export const AuthContext = createContext<IContext>({} as IContext);
 
 export const AuthProvider = ({ children }: IAuthProvider): JSX.Element => {
   const [user, setUser] = useState<IUser | null>();
+
+  useEffect(() => {
+    const user = getUserLocalStorage();
+
+    if (user) {
+      setUser(user);
+    }
+  }, []);
 
   const authenticate = async (email: string, password: string) => {
     const response = await LoginRequest(email, password);
@@ -22,9 +30,13 @@ export const AuthProvider = ({ children }: IAuthProvider): JSX.Element => {
     const payload = { token: response.token, email };
 
     setUser(payload);
+    setUserLocalStorage(payload);
   };
 
-  const logout = (): void => {};
+  const logout = (): void => {
+    setUser(null);
+    setUserLocalStorage(null);
+  };
 
   return (
     <AuthContext.Provider value={{ ...user, authenticate, logout }}>
@@ -32,6 +44,3 @@ export const AuthProvider = ({ children }: IAuthProvider): JSX.Element => {
     </AuthContext.Provider>
   );
 };
-
-/* export const useMyHookApplication = (): IContextApplication =>
-  useContext(AuthContext); */
