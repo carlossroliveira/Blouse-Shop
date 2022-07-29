@@ -1,6 +1,7 @@
 import React, { FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
+import { BlouseStore } from '../blouseStore';
 
 export const Profile = () => {
   const NAVIGATION = useNavigate();
@@ -16,11 +17,16 @@ export const Profile = () => {
       alert(err);
     }
   };
+
   return (
     <div>
-      <h1>Logado</h1>
+      <>
+        <h1>Logado</h1>
 
-      <button onClick={handleSubmita}>Sair</button>
+        <BlouseStore />
+
+        <button onClick={handleSubmita}>Sair</button>
+      </>
     </div>
   );
 };
