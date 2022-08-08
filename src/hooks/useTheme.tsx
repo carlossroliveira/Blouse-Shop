@@ -5,14 +5,14 @@ import { useContext } from 'react';
 // -------------------------------------------------
 // Context
 // -------------------------------------------------
-import { AuthContext } from '../context/AuthProvider';
+import { ThemeContext } from '../context/themes/ContextTheme';
 // -------------------------------------------------
 // Types
 // -------------------------------------------------
-import { IContext } from '../context/AuthProvider/types';
+import { IThemeContext } from '../context/themes/types';
 
-export const useAuth = (): IContext => {
-  const context = useContext(AuthContext);
+export const useTheme = (): IThemeContext => {
+  const context = useContext(ThemeContext);
 
   return context;
 };

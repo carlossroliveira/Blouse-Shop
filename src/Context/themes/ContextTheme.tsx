@@ -1,30 +1,29 @@
 // -------------------------------------------------
 // Packages
 // -------------------------------------------------
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useState } from 'react';
 // -------------------------------------------------
-// Components
+// Styles
 // -------------------------------------------------
-import dark from '../../styles/themes/dark';
-import light from '../../styles/themes/light';
+import { themeDark, themeLight } from '../../styles/themes';
 // -------------------------------------------------
 // Types
 // -------------------------------------------------
-import { ITheme, IThemeContext, IThemeProvider } from './types';
+import { IThemeContext, IThemeProvider } from './types';
 
-const Context = createContext({} as IThemeContext);
+export const ThemeContext = createContext({} as IThemeContext);
 
 export const ThemeProvider = ({ children }: IThemeProvider): JSX.Element => {
-  const [themes, setThemes] = useState<ITheme>(dark);
+  const [themeMode, setThemeMode] = useState(themeDark);
 
   const handleThemes = () =>
-    themes.title === 'dark' ? setThemes(light) : setThemes(dark);
+    themeMode.palette.mode === 'dark'
+      ? setThemeMode(themeLight)
+      : setThemeMode(themeDark);
 
   return (
-    <Context.Provider value={{ handleThemes, themes }}>
+    <ThemeContext.Provider value={{ handleThemes, themeMode }}>
       {children}
-    </Context.Provider>
+    </ThemeContext.Provider>
   );
 };
-
-export const useMyHook = (): IThemeContext => useContext(Context);
