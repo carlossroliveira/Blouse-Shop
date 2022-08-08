@@ -7,24 +7,31 @@ import React from 'react';
 // -------------------------------------------------
 import { RoutesComponent } from './routes';
 // -------------------------------------------------
+// Components
+// -------------------------------------------------
+import { Box, Switch, ThemeProvider } from '@mui/material';
+// -------------------------------------------------
 // Context
 // -------------------------------------------------
-import { useMyHook } from './context/themes/ContextTheme';
-// -------------------------------------------------
-// Styles
-// -------------------------------------------------
-import { ThemeProvider } from 'styled-components';
-import { GlobalStyle } from './styles/GlobalStyles';
 import { AuthProvider } from './context/AuthProvider';
+// -------------------------------------------------
+// Hook
+// -------------------------------------------------
+import { useTheme } from './hooks/useTheme';
 
 export const App = (): JSX.Element => {
-  const { themes } = useMyHook();
+  const { handleThemes, themeMode } = useTheme();
 
   return (
-    <ThemeProvider theme={themes}>
+    <ThemeProvider theme={themeMode}>
       <AuthProvider>
-        <GlobalStyle />
         <RoutesComponent />
+        <Switch onChange={handleThemes} />
+        <Box bgcolor={themeMode.palette.primary.main}>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor ipsam
+          adipisci et eaque, nostrum officia soluta, ex atque totam nam facilis,
+          corrupti ab at veniam deleniti! Dolor ad ipsum atque.
+        </Box>
       </AuthProvider>
     </ThemeProvider>
   );
