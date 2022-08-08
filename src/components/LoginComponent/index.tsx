@@ -23,17 +23,6 @@ export const LoginComponent = () => {
     }
   };
 
-  /*  async function onFinish(event: any, email: string, password: string) {
-    event.preventDefault();
-    try {
-      await auth.authenticate(email, password);
-
-      NAVIGATION('/profile');
-    } catch (err) {
-      alert(err);
-    }
-  } */
-
   return (
     <>
       <form onSubmit={handleSubmita}>
