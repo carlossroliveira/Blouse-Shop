@@ -6,23 +6,23 @@ import React from 'react';
 // Components
 // -------------------------------------------------
 import { RoutesComponent } from './routes';
-import { useMyHook } from './Context/themes/ContextTheme';
 // -------------------------------------------------
 // Styles
 // -------------------------------------------------
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from './styles/GlobalStyles';
-import { ThemeProviderApplication } from './Context/contextApplication/ContextTheme';
+import { useTheme } from './hooks/useTheme';
+import { AuthProvider } from './context/AuthProvider';
 
 export const App = (): JSX.Element => {
-  const { themes } = useMyHook();
+  const { themes } = useTheme();
 
   return (
     <ThemeProvider theme={themes}>
-      <ThemeProviderApplication>
+      <AuthProvider>
         <GlobalStyle />
         <RoutesComponent />
-      </ThemeProviderApplication>
+      </AuthProvider>
     </ThemeProvider>
   );
 };

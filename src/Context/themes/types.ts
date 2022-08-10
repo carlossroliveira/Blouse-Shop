@@ -6,7 +6,7 @@ import { ReactNode } from 'react';
 // Types
 // -------------------------------------------------
 
-export interface IThemeContext {
+export interface IContextProvider {
   themes: ITheme;
   handleThemes: () => void;
 }

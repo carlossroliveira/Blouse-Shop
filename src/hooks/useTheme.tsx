@@ -5,14 +5,14 @@ import { useContext } from 'react';
 // -------------------------------------------------
 // Context
 // -------------------------------------------------
-import { ThemeContext } from '../context/themes/ContextTheme';
+import { ContextProvider } from '../context/themes/ContextTheme';
 // -------------------------------------------------
 // Types
 // -------------------------------------------------
-import { IThemeContext } from '../context/themes/types';
+import { IContextProvider } from '../context/themes/types';
 
-export const useTheme = (): IThemeContext => {
-  const context = useContext(ThemeContext);
+export const useTheme = (): IContextProvider => {
+  const context = useContext(ContextProvider);
 
   return context;
 };
