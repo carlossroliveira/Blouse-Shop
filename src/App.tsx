@@ -3,36 +3,26 @@
 // -------------------------------------------------
 import React from 'react';
 // -------------------------------------------------
-// Routes
-// -------------------------------------------------
-import { RoutesComponent } from './routes';
-// -------------------------------------------------
 // Components
 // -------------------------------------------------
-import { Box, Switch, ThemeProvider } from '@mui/material';
+import { RoutesComponent } from './routes';
+import { useMyHook } from './Context/themes/ContextTheme';
 // -------------------------------------------------
-// Context
+// Styles
 // -------------------------------------------------
-import { AuthProvider } from './context/AuthProvider';
-// -------------------------------------------------
-// Hook
-// -------------------------------------------------
-import { useTheme } from './hooks/useTheme';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from './styles/GlobalStyles';
+import { ThemeProviderApplication } from './Context/contextApplication/ContextTheme';
 
 export const App = (): JSX.Element => {
-  const { handleThemes, themeMode } = useTheme();
+  const { themes } = useMyHook();
 
   return (
-    <ThemeProvider theme={themeMode}>
-      <AuthProvider>
+    <ThemeProvider theme={themes}>
+      <ThemeProviderApplication>
+        <GlobalStyle />
         <RoutesComponent />
-        <Switch onChange={handleThemes} />
-        <Box bgcolor={themeMode.palette.primary.main}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor ipsam
-          adipisci et eaque, nostrum officia soluta, ex atque totam nam facilis,
-          corrupti ab at veniam deleniti! Dolor ad ipsum atque.
-        </Box>
-      </AuthProvider>
+      </ThemeProviderApplication>
     </ThemeProvider>
   );
 };

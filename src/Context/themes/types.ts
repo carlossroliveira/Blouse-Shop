@@ -1,15 +1,32 @@
 // -------------------------------------------------
 // Packages
 // -------------------------------------------------
-import { Theme } from '@mui/material';
+import { ReactNode } from 'react';
 // -------------------------------------------------
 // Types
 // -------------------------------------------------
-import { ReactNode } from 'react';
 
 export interface IThemeContext {
-  themeMode: Theme;
+  themes: ITheme;
   handleThemes: () => void;
+}
+export interface ITheme {
+  title: string;
+
+  fontFamily: {
+    fontDefault: string;
+  };
+  color: {
+    primary: string;
+    secondary: string;
+  };
+  background: {
+    primary: string;
+    secondary: string;
+  };
+  boxShadow: {
+    primary: string;
+  };
 }
 
 export interface IThemeProvider {
