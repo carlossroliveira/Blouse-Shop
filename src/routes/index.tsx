@@ -6,9 +6,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // -------------------------------------------------
 // Components
 // -------------------------------------------------
+import { Login } from '../pages/Login';
 import { Profile } from '../pages/Profile';
 import { Protected } from '../components/Protected';
-import { LoginComponent } from '../components/LoginComponent';
 
 export const RoutesComponent = (): JSX.Element => {
   return (
@@ -23,7 +23,7 @@ export const RoutesComponent = (): JSX.Element => {
           }
         />
 
-        <Route path="/" element={<LoginComponent />} />
+        <Route path="/" element={<Login />} />
 
         {/* <Route path="*" element={<Signin />} /> */}
       </Routes>

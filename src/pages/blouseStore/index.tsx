@@ -1,14 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import axios from 'axios';
 import { Mirage } from '../../mirage';
 
 export const BlouseStore = () => {
-  /* const [users, setUsers] = useState([]); */
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get('api/users').then((response) => response.data);
-    /* .then((data) => setUsers(data)); */
+    axios
+      .get('api/users')
+      .then((response) => response.data)
+      .then((data) => setUsers(data));
   }, []);
 
   Mirage();
@@ -18,7 +20,7 @@ export const BlouseStore = () => {
       <h1>Testing Mirage JS</h1>
 
       <ul>
-        {/* {users?.map((user: any) => (
+        {users?.map((user: any) => (
           <>
             <img
               src={user?.foto?.map((fotos: any) => fotos.src)}
@@ -34,7 +36,7 @@ export const BlouseStore = () => {
               <p>{user.descricao}</p>
             </div>
           </>
-        ))} */}
+        ))}
       </ul>
     </>
   );
