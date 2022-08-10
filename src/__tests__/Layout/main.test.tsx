@@ -2,20 +2,25 @@
 // Packages
 // -------------------------------------------------
 import React from 'react';
-
+import 'jest-styled-components';
 import '@testing-library/jest-dom';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 // -------------------------------------------------
 // Components
 // -------------------------------------------------
-import { Protected } from '../../components/Protected';
+import { Login } from '../../pages/Login';
 
-describe('Layout Testing', () => {
+// -------------------------------------------------
+// Utils
+// -------------------------------------------------
+import WithThemeComponent from '../../utils/withThemeComponent';
+
+const LoginWithTheme = WithThemeComponent(Login);
+
+describe('Login Testing', () => {
   it('Should...', () => {
-    render(
-      <Protected>
-        <p>aaa</p>
-      </Protected>,
-    );
+    render(<LoginWithTheme />);
+
+    screen.debug();
   });
 });
