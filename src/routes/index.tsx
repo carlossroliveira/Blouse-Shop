@@ -6,8 +6,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // -------------------------------------------------
 // Components
 // -------------------------------------------------
-import { Protected } from '../components/Protected';
 import { Profile } from '../pages/Profile';
+import { Protected } from '../components/Protected';
 import { LoginComponent } from '../components/LoginComponent';
 
 export const RoutesComponent = (): JSX.Element => {

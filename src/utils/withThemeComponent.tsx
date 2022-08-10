@@ -3,6 +3,7 @@
 // Packages
 // -------------------------------------------------
 import React, { ComponentType } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 // -------------------------------------------------
 // Components
 // -------------------------------------------------
@@ -21,7 +22,9 @@ function WithThemeComponent<T>(Component: ComponentType<T>) {
     return (
       <ThemeProvider theme={dark}>
         <AuthProvider>
-          <Component {...(props as T)} />
+          <BrowserRouter>
+            <Component {...(props as T)} />
+          </BrowserRouter>
         </AuthProvider>
       </ThemeProvider>
     );
