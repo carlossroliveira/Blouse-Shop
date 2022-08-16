@@ -9,10 +9,10 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 body {
-  font: 400 1rem 'Roboto', sans-serif;
-  max-width: 1440px;
-  margin: 0 auto;
   padding: 0;
+  margin: 0 auto;
+  max-width: 1440px;
+  font: 400 1rem 'Roboto', sans-serif;
 }
 
 ::-webkit-scrollbar {
