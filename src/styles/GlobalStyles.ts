@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 body {
-  font: 400 1rem "Inter", sans-serif;
+  font: 400 1rem 'Roboto', sans-serif;
   max-width: 1440px;
   margin: 0 auto;
   padding: 0;
