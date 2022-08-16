@@ -3,7 +3,7 @@
 // -------------------------------------------------
 import React, { createContext, useState } from 'react';
 // -------------------------------------------------
-// Components
+// Styles
 // -------------------------------------------------
 import dark from '../../styles/themes/dark';
 import light from '../../styles/themes/light';

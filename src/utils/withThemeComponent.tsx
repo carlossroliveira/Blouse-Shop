@@ -4,9 +4,6 @@
 // -------------------------------------------------
 import React, { ComponentType } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-// -------------------------------------------------
-// Components
-// -------------------------------------------------
 import { ThemeProvider } from 'styled-components';
 // -------------------------------------------------
 // Context

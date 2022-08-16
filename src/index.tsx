@@ -2,7 +2,7 @@
 // Packages
 // -------------------------------------------------
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 // -------------------------------------------------
 // Components
 // -------------------------------------------------
@@ -13,7 +13,9 @@ import { App } from './App';
 import { AuthProvider } from './context/AuthProvider';
 import { ThemeProvider } from './context/themes/ContextTheme';
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('root') as HTMLElement);
+
+root.render(
   <React.StrictMode>
     <ThemeProvider>
       <AuthProvider>
@@ -21,5 +23,4 @@ ReactDOM.render(
       </AuthProvider>
     </ThemeProvider>
   </React.StrictMode>,
-  document.getElementById('root'),
 );
