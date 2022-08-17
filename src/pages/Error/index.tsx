@@ -3,6 +3,10 @@
 // -------------------------------------------------
 import React from 'react';
 // -------------------------------------------------
+// Components
+// -------------------------------------------------
+import { ButtonLink } from '../../components/ButtonLink';
+// -------------------------------------------------
 // Images
 // -------------------------------------------------
 import photo from './OopsError.svg';
@@ -28,7 +32,7 @@ export const Error = (): JSX.Element => {
         <TitleSC>Esta página não existe!</TitleSC>
         <ParagraphSC>Clique no botão para volta</ParagraphSC>
 
-        <button>Volta</button>
+        <ButtonLink text="Voltar" path="/" />
       </DivTwoSC>
     </ContainerSC>
   );

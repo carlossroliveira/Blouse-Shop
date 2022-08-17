@@ -19,10 +19,12 @@ export interface ITheme {
   color: {
     primary: string;
     secondary: string;
+    tertiary: string;
   };
   background: {
     primary: string;
     secondary: string;
+    tertiary: string;
   };
   boxShadow: {
     primary: string;

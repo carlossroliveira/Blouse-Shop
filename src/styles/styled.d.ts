@@ -13,10 +13,12 @@ declare module 'styled-components' {
     color: {
       primary: string;
       secondary: string;
+      tertiary: string;
     };
     background: {
       primary: string;
       secondary: string;
+      tertiary: string;
     };
     boxShadow: {
       primary: string;

@@ -1,12 +1,13 @@
 // -------------------------------------------------
 // Packages
 // -------------------------------------------------
-import React from 'react';
+import { ButtonHTMLAttributes } from 'react';
 // -------------------------------------------------
-// Styles
+// Types
 // -------------------------------------------------
-import { ContainerSC } from './buttonstyles';
 
-export const Button = () => {
-  return <ContainerSC>index</ContainerSC>;
-};
+export interface ButtonLinkProps
+  extends ButtonHTMLAttributes<HTMLButtonElement> {
+  text: string;
+  path?: string;
+}

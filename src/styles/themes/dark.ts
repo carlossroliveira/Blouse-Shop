@@ -7,10 +7,12 @@ export default {
   color: {
     primary: '#f8f8f8',
     secondary: '#383838',
+    tertiary: '#90caf9',
   },
   background: {
     primary: '#383838',
     secondary: '#f8f8f8',
+    tertiary: '#9294f866',
   },
   boxShadow: {
     primary:
