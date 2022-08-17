@@ -17,6 +17,7 @@ import photo from './OopsError.svg';
 import {
   ContainerSC,
   DivOneSC,
+  DivSC,
   DivTwoSC,
   ParagraphSC,
   TitleSC,
@@ -31,11 +32,14 @@ export const Error = (): JSX.Element => {
 
       <DivTwoSC>
         <TitleSC>Esta página não existe!</TitleSC>
+
         <ParagraphSC>Clique no botão para volta</ParagraphSC>
 
         <ButtonLink text="Voltar" path="/" />
 
-        <SocialNetworks />
+        <DivSC>
+          <SocialNetworks />
+        </DivSC>
       </DivTwoSC>
     </ContainerSC>
   );

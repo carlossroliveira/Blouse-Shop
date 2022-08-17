@@ -22,7 +22,7 @@ export const DivOneSC = styled.div`
   }
 
   img {
-    width: 100%;
+    width: 95%;
   }
 
   background-image: url('./assets/backgroundError.png');
@@ -50,4 +50,8 @@ export const TitleSC = styled.h1`
 export const ParagraphSC = styled.p`
   font-size: 1.6rem;
   color: ${({ theme }) => theme.color.tertiary};
+`;
+
+export const DivSC = styled.div`
+  margin-top: 6rem;
 `;
