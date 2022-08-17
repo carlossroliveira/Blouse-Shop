@@ -6,6 +6,7 @@ import React from 'react';
 // Components
 // -------------------------------------------------
 import { ButtonLink } from '../../components/ButtonLink';
+import { SocialNetworks } from '../../components/SocialNetworks';
 // -------------------------------------------------
 // Images
 // -------------------------------------------------
@@ -33,6 +34,8 @@ export const Error = (): JSX.Element => {
         <ParagraphSC>Clique no botão para volta</ParagraphSC>
 
         <ButtonLink text="Voltar" path="/" />
+
+        <SocialNetworks />
       </DivTwoSC>
     </ContainerSC>
   );

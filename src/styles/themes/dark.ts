@@ -8,6 +8,8 @@ export default {
     primary: '#f8f8f8',
     secondary: '#383838',
     tertiary: '#90caf9',
+    quaternary: '#fb6f24',
+    quinary: '#8ca315',
   },
   background: {
     primary: '#383838',

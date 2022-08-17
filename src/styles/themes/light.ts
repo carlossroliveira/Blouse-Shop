@@ -8,6 +8,8 @@ export default {
     primary: '#393E46',
     secondary: '#EEEEEE',
     tertiary: '',
+    quaternary: '',
+    quinary: '',
   },
   background: {
     primary: '#EEEEEE',

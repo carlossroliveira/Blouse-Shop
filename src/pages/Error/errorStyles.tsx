@@ -1,12 +1,8 @@
 // -------------------------------------------------
 // Packages
 // -------------------------------------------------
-import styled, { css } from 'styled-components';
-
-const STYLES_DEFAULT = css`
-  display: flex;
-  flex: 1 500px;
-`;
+import styled from 'styled-components';
+import { STYLES_DEFAULT } from './stylesUtils';
 
 export const ContainerSC = styled.section`
   height: 100vh;
@@ -46,12 +42,12 @@ export const DivTwoSC = styled.div`
 `;
 
 export const TitleSC = styled.h1`
-  color: #90caf9;
   font-size: 2rem;
   margin-bottom: 0;
+  color: ${({ theme }) => theme.color.tertiary};
 `;
 
 export const ParagraphSC = styled.p`
   font-size: 1.6rem;
-  color: #90caf9;
+  color: ${({ theme }) => theme.color.tertiary};
 `;
