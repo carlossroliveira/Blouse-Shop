@@ -9,17 +9,22 @@ import { ContainerSC } from './inputStyles';
 // -------------------------------------------------
 // Types
 // -------------------------------------------------
-import { InputProps } from './types';
+/* import { InputProps } from './types'; */
 
-export const Input = (props: InputProps) => {
+export const Input = () => {
   return (
     <ContainerSC>
-      <input
+      {/* <input
         type={props.type}
         value={props.value}
         onChange={props.onChange}
         placeholder={props.placeholder}
-      />
+      /> */}
+
+      <div className="text-field-filled">
+        <input type="text" />
+        <span>Name</span>
+      </div>
     </ContainerSC>
   );
 };

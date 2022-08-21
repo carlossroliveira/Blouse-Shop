@@ -22,7 +22,7 @@ export const DivOneSC = styled.div`
   }
 
   img {
-    width: 95%;
+    max-width: 90%;
   }
 
   background-image: url('./assets/backgroundError.png');

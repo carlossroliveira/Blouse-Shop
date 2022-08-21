@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
 body {
   padding: 0;
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1540px;
   font: 400 1rem 'Roboto', sans-serif;
 }
 

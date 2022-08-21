@@ -25,7 +25,7 @@ export const App = (): JSX.Element => {
     <ThemeProvider theme={themes}>
       <AuthProvider>
         <GlobalStyle />
-        <Input name="input" type="text" />
+        <Input />
         {/* <RoutesComponent /> */}
       </AuthProvider>
     </ThemeProvider>

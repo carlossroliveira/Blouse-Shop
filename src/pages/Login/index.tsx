@@ -10,6 +10,7 @@ import { useAuth } from '../../hooks/useAuth';
 // -------------------------------------------------
 // Styles
 // -------------------------------------------------
+import { ContainerSC, DivOneSC, DivTwoSC } from './loginStyles';
 
 export const Login = () => {
   const [email, setEmail] = useState('');
@@ -34,24 +35,30 @@ export const Login = () => {
   };
 
   return (
-    <form onSubmit={handleSubmits}>
-      <div>
-        <input
-          type="text"
-          placeholder="email"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-        />
-      </div>
-      <div>
-        <input
-          type="text"
-          placeholder="Senha"
-          value={password}
-          onChange={(event) => setPassword(event.target.value)}
-        />
-      </div>
-      <button type="submit">Logar</button>
-    </form>
+    <ContainerSC>
+      <DivOneSC>IMG</DivOneSC>
+
+      <DivTwoSC>
+        <form onSubmit={handleSubmits}>
+          <div>
+            <input
+              type="text"
+              placeholder="email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              placeholder="Senha"
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
+            />
+          </div>
+          <button type="submit">Logar</button>
+        </form>
+      </DivTwoSC>
+    </ContainerSC>
   );
 };
