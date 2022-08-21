@@ -6,7 +6,7 @@ import { ThemeProvider } from 'styled-components';
 // -------------------------------------------------
 // Components
 // -------------------------------------------------
-/* import { RoutesComponent } from './routes'; */
+import { RoutesComponent } from './routes';
 // -------------------------------------------------
 // Context
 // -------------------------------------------------
@@ -16,8 +16,8 @@ import { AuthProvider } from './context/AuthProvider';
 // Styles
 // -------------------------------------------------
 import { GlobalStyle } from './styles/GlobalStyles';
-import { Input } from './components/Input';
-
+/* import { Input } from './components/Input';
+ */
 export const App = (): JSX.Element => {
   const { themes } = useTheme();
 
@@ -25,8 +25,8 @@ export const App = (): JSX.Element => {
     <ThemeProvider theme={themes}>
       <AuthProvider>
         <GlobalStyle />
-        <Input />
-        {/* <RoutesComponent /> */}
+        {/* <Input /> */}
+        <RoutesComponent />
       </AuthProvider>
     </ThemeProvider>
   );
