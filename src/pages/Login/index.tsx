@@ -10,7 +10,14 @@ import { useAuth } from '../../hooks/useAuth';
 // -------------------------------------------------
 // Styles
 // -------------------------------------------------
-import { ContainerSC, DivOneSC, DivTwoSC } from './loginStyles';
+import {
+  ContainerSC,
+  DivMainSC,
+  DivOneSC,
+  DivSecondSC,
+  DivTwoSC,
+  Tes,
+} from './loginStyles';
 
 export const Login = () => {
   const [email, setEmail] = useState('');
@@ -36,29 +43,43 @@ export const Login = () => {
 
   return (
     <ContainerSC>
-      <DivOneSC>IMG</DivOneSC>
+      <DivMainSC>
+        <DivOneSC>
+          <DivSecondSC>
+            <form onSubmit={handleSubmits}>
+              <div>
+                <input
+                  type="text"
+                  placeholder="email"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Senha"
+                  value={password}
+                  onChange={(event) => setPassword(event.target.value)}
+                />
+              </div>
+              <button type="submit">Logar</button>
+            </form>
 
-      <DivTwoSC>
-        <form onSubmit={handleSubmits}>
-          <div>
-            <input
-              type="text"
-              placeholder="email"
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
-            />
-          </div>
-          <div>
-            <input
-              type="text"
-              placeholder="Senha"
-              value={password}
-              onChange={(event) => setPassword(event.target.value)}
-            />
-          </div>
-          <button type="submit">Logar</button>
-        </form>
-      </DivTwoSC>
+            <button>google</button>
+            <button>github</button>
+          </DivSecondSC>
+        </DivOneSC>
+
+        <Tes>
+          <img
+            src="https://img.wallpapic-br.com/i8281-813-87/medium/futebol-desenhos-animados-jogador-de-design-grafico-imagem-de-fundo.jpg"
+            alt=""
+          />
+        </Tes>
+
+        <DivTwoSC>aa</DivTwoSC>
+      </DivMainSC>
     </ContainerSC>
   );
 };
