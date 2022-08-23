@@ -15,14 +15,6 @@ export const ContainerSC = styled.section`
   padding: 2rem;
 `;
 
-export const Tes = styled.div`
-  position: absolute;
-  /* z-index: 1; */
-  img {
-    width: 20rem;
-  }
-`;
-
 export const DivMainSC = styled.div`
   height: calc(100vh - 4rem);
 
@@ -32,8 +24,8 @@ export const DivMainSC = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 
-  max-width: 70rem;
   margin: 0 auto;
+  max-width: 70rem;
 
   box-shadow: ${({ theme }) => theme.boxShadow.primary};
 `;
@@ -41,12 +33,22 @@ export const DivMainSC = styled.div`
 export const DivOneSC = styled.div`
   ${STYLES_DEFAULT}
 
-  background-color: ${({ theme }) => theme.color.primary};
+  padding: 10rem;
+
+  background-color: ${({ theme }) => theme.background.secondary};
+  background: linear-gradient(90deg, #f8f8f8 0%, #383838 5%);
 `;
 
 export const DivSecondSC = styled.div`
-  padding: 10rem;
-  background: red;
+  border: 2px solid tomato;
+
+  margin-top: 1rem;
+  padding: 0 2rem;
+`;
+
+export const TitleSC = styled.h1`
+  font-size: 30px;
+  color: ${({ theme }) => theme.color.primary};
 `;
 
 export const DivTwoSC = styled.div`

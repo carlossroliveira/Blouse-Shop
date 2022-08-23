@@ -20,6 +20,7 @@ import {
   DivOneSC,
   DivSecondSC,
   DivTwoSC,
+  TitleSC,
 } from './loginStyles';
 
 export const Login = () => {
@@ -49,11 +50,13 @@ export const Login = () => {
       <DivMainSC>
         <DivOneSC>
           <DivSecondSC>
+            <TitleSC>Faça seu login</TitleSC>
+
             <form onSubmit={handleSubmits}>
               <div>
                 <input
                   type="text"
-                  placeholder="email"
+                  placeholder="Email"
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
                 />
@@ -66,11 +69,11 @@ export const Login = () => {
                   onChange={(event) => setPassword(event.target.value)}
                 />
               </div>
-              <button type="submit">Logar</button>
+              <button type="submit">Entra</button>
             </form>
 
-            <button>google</button>
-            <button>github</button>
+            <button>Continue com Google</button>
+            <button>Continue com Github</button>
           </DivSecondSC>
         </DivOneSC>
 
