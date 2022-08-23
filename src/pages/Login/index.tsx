@@ -8,6 +8,10 @@ import { useNavigate } from 'react-router-dom';
 // -------------------------------------------------
 import { useAuth } from '../../hooks/useAuth';
 // -------------------------------------------------
+// Images
+// -------------------------------------------------
+import photo from './cr7.png';
+// -------------------------------------------------
 // Styles
 // -------------------------------------------------
 import {
@@ -16,7 +20,6 @@ import {
   DivOneSC,
   DivSecondSC,
   DivTwoSC,
-  Tes,
 } from './loginStyles';
 
 export const Login = () => {
@@ -71,14 +74,9 @@ export const Login = () => {
           </DivSecondSC>
         </DivOneSC>
 
-        <Tes>
-          <img
-            src="https://img.wallpapic-br.com/i8281-813-87/medium/futebol-desenhos-animados-jogador-de-design-grafico-imagem-de-fundo.jpg"
-            alt=""
-          />
-        </Tes>
-
-        <DivTwoSC>aa</DivTwoSC>
+        <DivTwoSC>
+          <img src={photo} alt="Background image" />
+        </DivTwoSC>
       </DivMainSC>
     </ContainerSC>
   );

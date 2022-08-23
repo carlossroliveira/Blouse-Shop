@@ -53,15 +53,12 @@ export const DivTwoSC = styled.div`
   ${STYLES_DEFAULT}
 
   position: absolute;
+  z-index: 1;
   right: 0;
 
-  transform: rotate(180deg);
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 30rem 0 0 55rem;
-
-  border-color: transparent transparent transparent #383838;
+  img {
+    width: 55rem;
+  }
 
   @media (max-width: 975px) {
     display: none;
