@@ -7,7 +7,6 @@ import {
   AiOutlineLinkedin,
   AiOutlineGlobal,
 } from 'react-icons/ai';
-
 // -------------------------------------------------
 // Styles
 // -------------------------------------------------
