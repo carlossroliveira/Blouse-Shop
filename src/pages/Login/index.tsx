@@ -35,8 +35,8 @@ import {
 } from './loginStyles';
 
 export const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
 
   const auth = useAuth();
   const navigate = useNavigate();
@@ -65,8 +65,8 @@ export const Login = () => {
 
             <form onSubmit={handleSubmits}>
               <Input
-                name="name"
-                text="Name"
+                name="email"
+                text="Email"
                 variant="text"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
