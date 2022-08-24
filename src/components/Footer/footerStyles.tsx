@@ -6,6 +6,11 @@ import styled from 'styled-components';
 export const ContainerSC = styled.section`
   position: absolute;
   right: 8rem;
+
+  @media (max-width: 975px) {
+    margin-top: 3rem;
+    margin-right: -1rem;
+  }
 `;
 
 export const ParagraphSC = styled.p`

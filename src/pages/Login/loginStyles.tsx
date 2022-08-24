@@ -39,6 +39,11 @@ export const DivOneSC = styled.div`
 
   background-color: ${({ theme }) => theme.background.secondary};
   background: linear-gradient(90deg, #f8f8f8 0%, #383838 5%);
+
+  @media (max-width: 975px) {
+    padding: 0 2rem;
+    justify-content: center;
+  }
 `;
 
 export const DivSecondSC = styled.div`
