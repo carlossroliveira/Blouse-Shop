@@ -9,7 +9,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Error } from '../pages/Error';
 import { Login } from '../pages/Login';
 import { Profile } from '../pages/Profile';
-import { Protected } from '../components/Protected';
+import { Protected } from '../pages/Protected';
 
 export const RoutesComponent = (): JSX.Element => {
   return (

@@ -4,7 +4,7 @@ import { useAuth } from '../../hooks/useAuth';
 import { BlouseStore } from '../blouseStore';
 
 export const Profile = () => {
-  const NAVIGATION = useNavigate();
+  const navigate = useNavigate();
   const auth = useAuth();
 
   const handleSubmita = async (event: FormEvent) => {
@@ -12,7 +12,7 @@ export const Profile = () => {
 
     try {
       auth.logout();
-      NAVIGATION('/');
+      navigate('/');
     } catch (err) {
       alert(err);
     }
