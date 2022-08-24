@@ -8,6 +8,10 @@ import { useNavigate } from 'react-router-dom';
 // -------------------------------------------------
 import { useAuth } from '../../hooks/useAuth';
 // -------------------------------------------------
+// Component
+// -------------------------------------------------
+import { Input } from '../../components/Input';
+// -------------------------------------------------
 // Images
 // -------------------------------------------------
 import photo from './cr7.png';
@@ -54,26 +58,30 @@ export const Login = () => {
 
             <form onSubmit={handleSubmits}>
               <div>
-                <input
-                  type="text"
-                  placeholder="Email"
+                <Input
+                  name="name"
+                  text="Name"
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
                 />
               </div>
+
               <div>
-                <input
-                  type="text"
-                  placeholder="Senha"
+                <Input
+                  name="senha"
+                  text="Senha"
                   value={password}
                   onChange={(event) => setPassword(event.target.value)}
                 />
               </div>
-              <button type="submit">Entra</button>
+
+              <button>Entra</button>
             </form>
 
-            <button>Continue com Google</button>
-            <button>Continue com Github</button>
+            <div>
+              <button>Continue com Google</button>
+              <button>Continue com Github</button>
+            </div>
           </DivSecondSC>
         </DivOneSC>
 

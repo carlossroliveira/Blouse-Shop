@@ -16,7 +16,7 @@ export const ContainerSC = styled.section`
 `;
 
 export const DivMainSC = styled.div`
-  height: calc(100vh - 4rem);
+  /* height: calc(100vh - 4rem); */
 
   position: relative;
 
@@ -33,21 +33,24 @@ export const DivMainSC = styled.div`
 export const DivOneSC = styled.div`
   ${STYLES_DEFAULT}
 
-  padding: 10rem;
+  padding: 9rem 7rem;
+
+  border: 2px solid ${({ theme }) => theme.background.tertiary};
 
   background-color: ${({ theme }) => theme.background.secondary};
   background: linear-gradient(90deg, #f8f8f8 0%, #383838 5%);
 `;
 
 export const DivSecondSC = styled.div`
-  border: 2px solid tomato;
-
-  margin-top: 1rem;
+  z-index: 2;
   padding: 0 2rem;
+  border: 2px solid tomato;
 `;
 
 export const TitleSC = styled.h1`
   font-size: 30px;
+  text-align: center;
+  margin-bottom: 5rem;
   color: ${({ theme }) => theme.color.primary};
 `;
 
@@ -55,8 +58,8 @@ export const DivTwoSC = styled.div`
   ${STYLES_DEFAULT}
 
   position: absolute;
-  z-index: 1;
-  right: 0;
+  right: 2px;
+  top: 2px;
 
   img {
     width: 55rem;
