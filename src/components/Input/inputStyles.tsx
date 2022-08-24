@@ -3,7 +3,16 @@
 // -------------------------------------------------
 import styled from 'styled-components';
 
-export const ContainerSC = styled.section``;
+export const ContainerSC = styled.section`
+  svg {
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    cursor: pointer;
+  }
+`;
 
 export const DivGroupSC = styled.div`
   position: relative;
