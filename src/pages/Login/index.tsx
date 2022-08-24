@@ -3,6 +3,8 @@
 // -------------------------------------------------
 import React, { FormEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FcGoogle } from 'react-icons/fc';
+import { BsGithub } from 'react-icons/bs';
 // -------------------------------------------------
 // Context
 // -------------------------------------------------
@@ -11,6 +13,9 @@ import { useAuth } from '../../hooks/useAuth';
 // Component
 // -------------------------------------------------
 import { Input } from '../../components/Input';
+import { Footer } from '../../components/Footer';
+import { Button } from '../../components/Button';
+import { ButtonSocial } from '../../components/ButtonSocial';
 // -------------------------------------------------
 // Images
 // -------------------------------------------------
@@ -23,7 +28,9 @@ import {
   DivMainSC,
   DivOneSC,
   DivSecondSC,
+  DivSocialSC,
   DivTwoSC,
+  ImgSC,
   TitleSC,
 } from './loginStyles';
 
@@ -57,36 +64,34 @@ export const Login = () => {
             <TitleSC>Faça seu login</TitleSC>
 
             <form onSubmit={handleSubmits}>
-              <div>
-                <Input
-                  name="name"
-                  text="Name"
-                  value={email}
-                  onChange={(event) => setEmail(event.target.value)}
-                />
-              </div>
+              <Input
+                name="name"
+                text="Name"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+              />
 
-              <div>
-                <Input
-                  name="senha"
-                  text="Senha"
-                  value={password}
-                  onChange={(event) => setPassword(event.target.value)}
-                />
-              </div>
+              <Input
+                name="senha"
+                text="Senha"
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
+              />
 
-              <button>Entra</button>
+              <Button type="submit" text="Entra" />
             </form>
 
-            <div>
-              <button>Continue com Google</button>
-              <button>Continue com Github</button>
-            </div>
+            <DivSocialSC>
+              <ButtonSocial text="Google" icon={<FcGoogle />} />
+              <ButtonSocial text="Github" icon={<BsGithub />} />
+            </DivSocialSC>
+
+            <Footer />
           </DivSecondSC>
         </DivOneSC>
 
         <DivTwoSC>
-          <img src={photo} alt="Background image" />
+          <ImgSC src={photo} alt="Background image" />
         </DivTwoSC>
       </DivMainSC>
     </ContainerSC>

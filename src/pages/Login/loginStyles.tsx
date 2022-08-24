@@ -16,7 +16,7 @@ export const ContainerSC = styled.section`
 `;
 
 export const DivMainSC = styled.div`
-  /* height: calc(100vh - 4rem); */
+  height: calc(100vh - 4rem);
 
   position: relative;
 
@@ -33,7 +33,7 @@ export const DivMainSC = styled.div`
 export const DivOneSC = styled.div`
   ${STYLES_DEFAULT}
 
-  padding: 9rem 7rem;
+  padding: 6rem 7rem;
 
   border: 2px solid ${({ theme }) => theme.background.tertiary};
 
@@ -44,14 +44,19 @@ export const DivOneSC = styled.div`
 export const DivSecondSC = styled.div`
   z-index: 2;
   padding: 0 2rem;
-  border: 2px solid tomato;
 `;
 
 export const TitleSC = styled.h1`
   font-size: 30px;
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 3.5rem;
   color: ${({ theme }) => theme.color.primary};
+`;
+
+export const DivSocialSC = styled.div`
+  display: flex;
+  margin-top: 4rem;
+  justify-content: space-evenly;
 `;
 
 export const DivTwoSC = styled.div`
@@ -61,11 +66,11 @@ export const DivTwoSC = styled.div`
   right: 2px;
   top: 2px;
 
-  img {
-    width: 55rem;
-  }
-
   @media (max-width: 975px) {
     display: none;
   }
+`;
+
+export const ImgSC = styled.img`
+  width: 55rem;
 `;
