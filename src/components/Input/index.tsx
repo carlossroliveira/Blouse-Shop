@@ -5,26 +5,34 @@ import React from 'react';
 // -------------------------------------------------
 // Styles
 // -------------------------------------------------
-import { ContainerSC } from './inputStyles';
+import {
+  ContainerSC,
+  DivGroupSC,
+  InputSC,
+  LabelSC,
+  SpanOneSC,
+  SpanTwoSC,
+} from './inputStyles';
 // -------------------------------------------------
 // Types
 // -------------------------------------------------
-/* import { InputProps } from './types'; */
+import { InputProps } from './types';
 
-export const Input = () => {
+export const Input = (props: InputProps) => {
   return (
     <ContainerSC>
-      {/* <input
-        type={props.type}
-        value={props.value}
-        onChange={props.onChange}
-        placeholder={props.placeholder}
-      /> */}
-
-      <div className="text-field-filled">
-        <input type="text" />
-        <span>Name</span>
-      </div>
+      <DivGroupSC>
+        <InputSC
+          required
+          type="text"
+          name={props.name}
+          value={props.value}
+          onChange={props.onChange}
+        />
+        <SpanOneSC></SpanOneSC>
+        <SpanTwoSC></SpanTwoSC>
+        <LabelSC>{props.text}</LabelSC>
+      </DivGroupSC>
     </ContainerSC>
   );
 };

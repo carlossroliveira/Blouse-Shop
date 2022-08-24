@@ -9,8 +9,8 @@ import { ChangeEvent } from 'react';
 
 export interface InputProps {
   name: string;
-  type: string;
+  text: string;
   value?: string;
-  placeholder?: string;
+  required?: boolean;
   onChange?: (value: ChangeEvent<HTMLInputElement>) => void;
 }
