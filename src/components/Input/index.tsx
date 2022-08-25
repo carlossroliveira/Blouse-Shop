@@ -53,7 +53,7 @@ export const Input = (props: InputProps) => {
         />
 
         <span onClick={handleToggle}>
-          {icon ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
+          {icon ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
         </span>
       </>
     );
