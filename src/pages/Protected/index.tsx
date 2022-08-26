@@ -1,8 +1,8 @@
 // -------------------------------------------------
 // Packages
 // -------------------------------------------------
-import React, { useMemo } from 'react';
-import Swal from 'sweetalert2';
+import React from 'react';
+/* import Swal from 'sweetalert2'; */
 // -------------------------------------------------
 // Context
 // -------------------------------------------------
@@ -10,7 +10,7 @@ import { useAuth } from '../../hooks/useAuth';
 // -------------------------------------------------
 // Component
 // -------------------------------------------------
-import { Login } from '../../pages/Login';
+/* import { Login } from '../../pages/Login'; */
 // -------------------------------------------------
 // Types
 // -------------------------------------------------
@@ -19,21 +19,20 @@ import { ProtectedProps } from './types';
 export const Protected = (props: ProtectedProps) => {
   const auth = useAuth();
 
-  const handleSwal = useMemo(() => {
+  /* const handleSwal = useMemo(() => {
     Swal.fire({
       title: 'Acesso Negado',
       text: 'Você não tem acesso a essa rota!',
       icon: 'warning',
       showCancelButton: false,
     });
-  }, []);
+  }, []); */
 
   return (
     <>
-      {!auth.email ? (
+      {!auth.disconnected ? (
         <>
-          <Login />
-          {handleSwal}
+          <h1>ERRRO!!!</h1>
         </>
       ) : (
         props.children

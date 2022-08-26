@@ -1,10 +1,10 @@
 // -------------------------------------------------
 // Packages
 // -------------------------------------------------
-import React, { FormEvent, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { BsGithub } from 'react-icons/bs';
+import { useNavigate } from 'react-router-dom';
 // -------------------------------------------------
 // Context
 // -------------------------------------------------
@@ -41,20 +41,13 @@ export const Login = () => {
   const auth = useAuth();
   const navigate = useNavigate();
 
-  const handleSubmits = async (event: FormEvent) => {
-    event.preventDefault();
-
-    console.log(email);
-    console.log(password);
-
+  if (auth.disconnected) {
     try {
-      await auth.authenticate(email, password);
-
       navigate('/profile');
     } catch (err) {
       alert(err);
     }
-  };
+  }
 
   return (
     <ContainerSC>
@@ -63,7 +56,7 @@ export const Login = () => {
           <DivSecondSC>
             <TitleSC>Faça seu login</TitleSC>
 
-            <form onSubmit={handleSubmits}>
+            <form onSubmit={(event) => auth.loginEmail(event, email, password)}>
               <Input
                 name="email"
                 text="Email"
@@ -84,8 +77,17 @@ export const Login = () => {
             </form>
 
             <DivSocialSC>
-              <ButtonSocial text="Google" icon={<FcGoogle />} />
-              <ButtonSocial text="Github" icon={<BsGithub />} />
+              <ButtonSocial
+                text="Google"
+                icon={<FcGoogle />}
+                onClick={() => auth.loginGoogle()}
+              />
+
+              <ButtonSocial
+                text="Github"
+                icon={<BsGithub />}
+                onClick={() => auth.loginGithub()}
+              />
             </DivSocialSC>
 
             <Footer />

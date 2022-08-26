@@ -1,8 +1,4 @@
 // -------------------------------------------------
-// Services
-// -------------------------------------------------
-import { Api } from '../../services/api';
-// -------------------------------------------------
 // Types
 // -------------------------------------------------
 import { IUser } from './types';
@@ -21,17 +17,4 @@ export const getUserLocalStorage = () => {
   const user = JSON.parse(myJson);
 
   return user ?? null;
-};
-
-export const LoginRequest = async (email: string, password: string) => {
-  try {
-    const response = await Api.post('login', {
-      email,
-      password,
-    });
-
-    return response?.data;
-  } catch (error) {
-    return null;
-  }
 };

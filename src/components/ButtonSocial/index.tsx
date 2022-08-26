@@ -13,7 +13,7 @@ import { ButtonSocialProps } from './types';
 
 export const ButtonSocial = (props: ButtonSocialProps) => {
   return (
-    <ButtonSC role="button">
+    <ButtonSC onClick={props.onClick} role="button">
       <>
         {props.icon}
         {props.text}

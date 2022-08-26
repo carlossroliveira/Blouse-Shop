@@ -2,19 +2,22 @@
 // -------------------------------------------------
 // Packages
 // -------------------------------------------------
-import { ReactNode } from 'react';
+import { FormEvent, ReactNode } from 'react';
 // -------------------------------------------------
 // Types
 // -------------------------------------------------
 
 export interface IUser {
-  email?: string;
-  token?: string;
+  email?: string | null;
+  token?: string | undefined;
 }
 
 export interface IContext extends IUser {
+  disconnected: boolean;
   logout: () => void;
-  authenticate: (email: string, password: string) => Promise<void>;
+  loginGithub: () => void;
+  loginGoogle: () => void;
+  loginEmail: (event: FormEvent, email: string, password: string) => void;
 }
 
 export interface IAuthProvider {

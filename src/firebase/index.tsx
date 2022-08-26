@@ -25,18 +25,18 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-const provider = new GoogleAuthProvider();
+export const provider = new GoogleAuthProvider();
 
-const providera = new GithubAuthProvider();
+export const githubProvider = new GithubAuthProvider();
 
-const auth = getAuth(app);
+export const authFireBase = getAuth(app);
 
 export const Firebase = (): JSX.Element => {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
 
   const gooogle = () => {
-    signInWithPopup(auth, provider)
+    signInWithPopup(authFireBase, provider)
       .then((result) => {
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential?.accessToken;
@@ -53,7 +53,7 @@ export const Firebase = (): JSX.Element => {
   const EmailESenha = (e: any) => {
     e.preventDefault();
 
-    signInWithEmailAndPassword(auth, email, senha)
+    signInWithEmailAndPassword(authFireBase, email, senha)
       .then((userCredential) => {
         const user = userCredential.user;
         console.log(user, 'Senha');
@@ -67,7 +67,7 @@ export const Firebase = (): JSX.Element => {
   };
 
   const githubb = () => {
-    signInWithPopup(auth, providera)
+    signInWithPopup(authFireBase, githubProvider)
       .then((result) => {
         const credential = GithubAuthProvider.credentialFromResult(result);
         const token = credential?.accessToken;
