@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import axios from 'axios';
 import { Mirage } from '../../mirage';
+import { Link } from 'react-router-dom';
 
 export const Blouses = () => {
   const [users, setUsers] = useState([]);
@@ -22,11 +23,14 @@ export const Blouses = () => {
       <ul>
         {users?.map((user: any) => (
           <>
-            <img
-              src={user?.foto?.map((fotos: any) => fotos.src)}
-              alt="imagem"
-            />
-            <div key={user.id}>
+            <Link to={`/profile/list/${user.id}`}>
+              <img
+                src={user?.foto?.map((fotos: any) => fotos.src)}
+                alt="imagem"
+              />
+            </Link>
+
+            {/* <div key={user.id}>
               <p>{user?.foto?.map((fotos: any) => fotos.titulo)}</p>
 
               <p>{user.tecido}</p>
@@ -34,7 +38,7 @@ export const Blouses = () => {
               <p>{user.preco}</p>
               <p>{user.marca}</p>
               <p>{user.descricao}</p>
-            </div>
+            </div> */}
           </>
         ))}
       </ul>

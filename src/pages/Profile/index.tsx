@@ -2,17 +2,26 @@
 // Packages
 // -------------------------------------------------
 import React, { FormEvent } from 'react';
-import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 // -------------------------------------------------
 // Context
 // -------------------------------------------------
 import { useAuth } from '../../hooks/useAuth';
 // -------------------------------------------------
-// Components
+// Component
 // -------------------------------------------------
+import { Footer } from '../../components/Footer';
+// -------------------------------------------------
+// Styles
+// -------------------------------------------------
+import { ContainerSC, DivFooter, DivHeader, DivMain } from './profileStyles';
+// -------------------------------------------------
+// Types
+// -------------------------------------------------
+import { ProfileProps } from './types';
 
-export const Profile = () => {
+export const Profile = (props: ProfileProps) => {
   const auth = useAuth();
   const navigate = useNavigate();
 
@@ -47,10 +56,17 @@ export const Profile = () => {
   };
 
   return (
-    <>
-      <h1>Logado</h1>
+    <ContainerSC>
+      <DivHeader>
+        <h1>Logado</h1>
+        <button onClick={handleClose}>Sair</button>
+      </DivHeader>
 
-      <button onClick={handleClose}>Sair</button>
-    </>
+      <DivMain>{props.children}</DivMain>
+
+      <DivFooter>
+        <Footer />
+      </DivFooter>
+    </ContainerSC>
   );
 };

@@ -1,5 +1,6 @@
 [
   {
+    "id": "01",
     "foto": [
       {
         "titulo": "Camisa Esquadrão Bahia II 2022 - Azul",
@@ -13,6 +14,8 @@
     "descricao": "Primeiro Campeão Brasileiro! Em busca do acesso à elite do futebol, o Esquadrão de Aço lança a coleção do Bahia para temporada de 2022."
   },
   {
+
+    "id": "02",
     "foto": [
       {
         "titulo": "Camisa Flamengo I 22/23 s/n° Torcedor Adidas Masculina",
@@ -26,6 +29,7 @@
     "descricao": "A maior paixão do mundo! Prestando homenagem à emoção que pulsa nas arquibancadas quando o Mengo está em campo."
   },
   {
+    "id": "03",
     "foto": [
       {
         "titulo": "Camisa Grêmio I 21/22 s/n° Torcedor Umbro Masculina",
@@ -39,6 +43,7 @@
     "descricao": "Com o Grêmio onde o Grêmio estiver! O Tricolor entra em campo para mais uma batalha e você fica na torcida devidamente uniformizado com a Camisa Grêmio Umbro Masculina."
   },
   {
+    "id": "04",
     "foto": [
       {
         "titulo": "Camisa Vasco da Gama I 22/23 Kappa Jogador Masculina",

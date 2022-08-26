@@ -3,6 +3,8 @@
 // -------------------------------------------------
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Bla } from '../pages/Bla';
+import { Blouses } from '../pages/Blouses';
 // -------------------------------------------------
 // Components
 // -------------------------------------------------
@@ -19,10 +21,13 @@ export const RoutesComponent = (): JSX.Element => {
           path="/profile"
           element={
             <Protected>
-              <Profile />
+              <Profile>
+                <Blouses />
+              </Profile>
             </Protected>
           }
         />
+        <Route path="/profile/list/:id" element={<Bla />} />
 
         <Route path="/" element={<Login />} />
 
