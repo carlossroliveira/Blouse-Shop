@@ -65,7 +65,7 @@ export const Login = () => {
         });
       }, 1000);
     } catch (err) {
-      alert(err);
+      err;
     }
   }
 

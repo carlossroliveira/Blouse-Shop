@@ -1,7 +1,10 @@
 // -------------------------------------------------
+// Packages
+// -------------------------------------------------
+import { ReactNode } from 'react';
+// -------------------------------------------------
 // Types
 // -------------------------------------------------
-
 export interface ProtectedProps {
-  children: JSX.Element;
+  children: ReactNode | JSX.Element;
 }

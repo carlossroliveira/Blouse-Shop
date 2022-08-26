@@ -1,14 +1,23 @@
+// -------------------------------------------------
+// Packages
+// -------------------------------------------------
 import React, { FormEvent } from 'react';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
+// -------------------------------------------------
+// Context
+// -------------------------------------------------
 import { useAuth } from '../../hooks/useAuth';
+// -------------------------------------------------
+// Components
+// -------------------------------------------------
 import { BlouseStore } from '../blouseStore';
 
 export const Profile = () => {
-  const navigate = useNavigate();
   const auth = useAuth();
+  const navigate = useNavigate();
 
-  const handleSubmita = async (event: FormEvent) => {
+  const handleClose = async (event: FormEvent) => {
     event.preventDefault();
 
     try {
@@ -34,19 +43,17 @@ export const Profile = () => {
         });
       }, 1000);
     } catch (err) {
-      alert(err);
+      err;
     }
   };
 
   return (
-    <div>
-      <>
-        <h1>Logado</h1>
+    <>
+      <h1>Logado</h1>
 
-        <BlouseStore />
+      <BlouseStore />
 
-        <button onClick={handleSubmita}>Sair</button>
-      </>
-    </div>
+      <button onClick={handleClose}>Sair</button>
+    </>
   );
 };
