@@ -11,7 +11,6 @@ import { useAuth } from '../../hooks/useAuth';
 // -------------------------------------------------
 // Components
 // -------------------------------------------------
-import { BlouseStore } from '../blouseStore';
 
 export const Profile = () => {
   const auth = useAuth();
@@ -50,8 +49,6 @@ export const Profile = () => {
   return (
     <>
       <h1>Logado</h1>
-
-      <BlouseStore />
 
       <button onClick={handleClose}>Sair</button>
     </>

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Mirage } from '../../mirage';
 
-export const BlouseStore = () => {
+export const Blouses = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
