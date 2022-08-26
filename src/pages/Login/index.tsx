@@ -2,6 +2,7 @@
 // Packages
 // -------------------------------------------------
 import React, { useState } from 'react';
+import Swal from 'sweetalert2';
 import { FcGoogle } from 'react-icons/fc';
 import { BsGithub } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
@@ -44,6 +45,25 @@ export const Login = () => {
   if (auth.disconnected) {
     try {
       navigate('/profile');
+
+      setTimeout(() => {
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer);
+            toast.addEventListener('mouseleave', Swal.resumeTimer);
+          },
+        });
+
+        Toast.fire({
+          icon: 'success',
+          title: 'Login feito com sucesso!',
+        });
+      }, 1000);
     } catch (err) {
       alert(err);
     }
