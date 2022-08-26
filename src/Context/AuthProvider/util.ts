@@ -8,13 +8,9 @@ export const setUserLocalStorage = (user: IUser | null) => {
 };
 
 export const getUserLocalStorage = () => {
-  const myJson = localStorage.getItem('user');
+  const myUser = localStorage.getItem('user');
 
-  if (!myJson) {
-    return null;
-  }
+  if (!myUser) return null;
 
-  const user = JSON.parse(myJson);
-
-  return user ?? null;
+  return JSON.parse(myUser) ?? null;
 };
