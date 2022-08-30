@@ -20,6 +20,7 @@ import { ContainerSC, DivFooter, DivHeader, DivMain } from './profileStyles';
 // Types
 // -------------------------------------------------
 import { ProfileProps } from './types';
+import { NamePage } from '../../components/NamePage';
 
 export const Profile = (props: ProfileProps) => {
   const auth = useAuth();
@@ -58,6 +59,7 @@ export const Profile = (props: ProfileProps) => {
   return (
     <ContainerSC>
       <DivHeader>
+        <NamePage title="Camisas" />
         <h1>Logado</h1>
         <button onClick={handleClose}>Sair</button>
       </DivHeader>
