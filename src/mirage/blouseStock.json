@@ -14,7 +14,6 @@
     "descricao": "Primeiro Campeão Brasileiro! Em busca do acesso à elite do futebol, o Esquadrão de Aço lança a coleção do Bahia para temporada de 2022."
   },
   {
-
     "id": "02",
     "foto": [
       {
@@ -57,6 +56,7 @@
     "descricao": "O Gigante da Colina entra em campo para mais uma batalha e você fica na torcida usando a nova Camisa Vasco Masculina da Kappa."
   },
   {
+    "id": "05",
     "foto": [
       {
         "titulo": "Camisa Vitória I 22/23 s/n° Torcedor Volt Masculina",
@@ -70,6 +70,7 @@
     "descricao": "Chegou a hora de escolher o seu manto! Desenvolvida em material resistente e aconchegante, a camisa garante um tecido macio, leve e com bom confortavel."
   },
   {
+    "id": "06",
     "foto": [
       {
         "titulo": "Camisa Palmeiras I 22/23 s/n° Torcedor Puma Masculina",
@@ -83,6 +84,7 @@
     "descricao": "O Palestra morre líder e o Palmeiras nasce campeão! Há 80 anos, em 1942, nosso alviverde deixava de ser Clube Palestra Itália para se tornar Sociedade Esportiva Palmeiras."
   },
   {
+    "id": "07",
     "foto": [
       {
         "titulo": "Camisa São Paulo I 22/23 s/n° Torcedor Adidas Masculina",
@@ -96,6 +98,7 @@
     "descricao": "O primeiro título mundial do SPFC completa 30 anos. Para não deixar passar esse marco, o clube e a Adidas homenageiam o feito na nova Camisa Masculina do São Paulo."
   },
   {
+    "id": "08",
     "foto": [
       {
         "titulo": "Camisa Internacional I 21/22 s/n° Torcedor Adidas",
@@ -109,6 +112,7 @@
     "descricao": "Gigante para sempre! Chegou a nova Camisa Internacional Adidas Masculina. Inspirada no glorioso Estádio Beira Rio, o manto titular da temporada 21/22."
   },
   {
+    "id": "09",
     "foto": [
       {
         "titulo": "Camisa Corinthians I 21/22 s/n° Jogador Nike Masculina",
