@@ -2,6 +2,7 @@
 // Packages
 // -------------------------------------------------
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 // -------------------------------------------------
 // Components
 // -------------------------------------------------
@@ -24,6 +25,7 @@ import {
 } from './errorStyles';
 
 export const Error = (): JSX.Element => {
+  const navigate = useNavigate();
   return (
     <ContainerSC>
       <DivOneSC>
@@ -35,7 +37,7 @@ export const Error = (): JSX.Element => {
 
         <ParagraphSC>Clique no botão para volta</ParagraphSC>
 
-        <ButtonLink text="Voltar" path="/" />
+        <ButtonLink text="Voltar" onClick={() => navigate(-1)} />
 
         <DivSC>
           <SocialNetworks />

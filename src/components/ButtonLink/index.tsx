@@ -14,7 +14,9 @@ import { ButtonLinkProps } from './types';
 export const ButtonLink = (props: ButtonLinkProps) => {
   return (
     <ContainerSC>
-      <LinkSC to={`${props.path}`}>{props.text}</LinkSC>
+      <LinkSC to={`${props.path}`} onClick={props.onClick}>
+        {props.text}
+      </LinkSC>
     </ContainerSC>
   );
 };

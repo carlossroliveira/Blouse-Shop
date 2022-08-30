@@ -10,4 +10,5 @@ export interface ButtonLinkProps
   extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
   path?: string;
+  onClick?: () => void;
 }
