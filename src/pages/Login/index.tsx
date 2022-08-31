@@ -7,7 +7,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { BsGithub } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 // -------------------------------------------------
-// Context
+// Hooks
 // -------------------------------------------------
 import { useAuth } from '../../hooks/useAuth';
 // -------------------------------------------------
@@ -44,7 +44,7 @@ export const Login = () => {
 
   if (auth.disconnected) {
     try {
-      navigate('/profile');
+      navigate('/posts');
 
       setTimeout(() => {
         const Toast = Swal.mixin({

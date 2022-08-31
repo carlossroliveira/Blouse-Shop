@@ -2,21 +2,18 @@
 // Packages
 // -------------------------------------------------
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 // -------------------------------------------------
-// Context
+// Hooks
 // -------------------------------------------------
 import { useAuth } from '../../hooks/useAuth';
 // -------------------------------------------------
 // Component
 // -------------------------------------------------
 import { Login } from '../../pages/Login';
-// -------------------------------------------------
-// Types
-// -------------------------------------------------
-import { ProtectedProps } from './types';
 
-export const Protected = (props: ProtectedProps) => {
+export const Protected = () => {
   const auth = useAuth();
 
-  return <>{!auth.disconnected ? <Login /> : props.children}</>;
+  return <>{!auth.disconnected ? <Login /> : <Outlet />}</>;
 };

@@ -2,27 +2,23 @@
 // Packages
 // -------------------------------------------------
 import React, { FormEvent } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 // -------------------------------------------------
-// Context
+// Hooks
 // -------------------------------------------------
 import { useAuth } from '../../hooks/useAuth';
 // -------------------------------------------------
 // Component
 // -------------------------------------------------
 import { Footer } from '../../components/Footer';
+import { NamePage } from '../../components/NamePage';
 // -------------------------------------------------
 // Styles
 // -------------------------------------------------
 import { ContainerSC, DivFooter, DivHeader, DivMain } from './profileStyles';
-// -------------------------------------------------
-// Types
-// -------------------------------------------------
-import { ProfileProps } from './types';
-import { NamePage } from '../../components/NamePage';
 
-export const Profile = (props: ProfileProps) => {
+export const Profile = () => {
   const auth = useAuth();
   const navigate = useNavigate();
 
@@ -60,11 +56,15 @@ export const Profile = (props: ProfileProps) => {
     <ContainerSC>
       <DivHeader>
         <NamePage title="Camisas" />
+
         <h1>Logado</h1>
+
         <button onClick={handleClose}>Sair</button>
       </DivHeader>
 
-      <DivMain>{props.children}</DivMain>
+      <DivMain>
+        <Outlet />
+      </DivMain>
 
       <DivFooter>
         <Footer />
