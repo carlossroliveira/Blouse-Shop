@@ -1,10 +1,9 @@
 import React from 'react';
 import { useFetch } from '../../hooks/useFetch';
 import { useParams } from 'react-router-dom';
-// -------------------------------------------------
-// Types
-// -------------------------------------------------
+
 import { IBProps } from '../../utils/types';
+import { NamePage } from '../../components/NamePage';
 
 export const BuyBlouse = () => {
   const { id } = useParams();
@@ -13,6 +12,7 @@ export const BuyBlouse = () => {
 
   return (
     <>
+      <NamePage title="Camisas" />
       <h2>{data?.marca}</h2>
       <h2>{data?.descricao}</h2>
     </>

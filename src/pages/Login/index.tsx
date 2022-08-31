@@ -16,6 +16,7 @@ import { useAuth } from '../../hooks/useAuth';
 import { Input } from '../../components/Input';
 import { Footer } from '../../components/Footer';
 import { Button } from '../../components/Button';
+import { NamePage } from '../../components/NamePage';
 import { ButtonSocial } from '../../components/ButtonSocial';
 // -------------------------------------------------
 // Images
@@ -71,6 +72,7 @@ export const Login = () => {
 
   return (
     <ContainerSC>
+      <NamePage title="Login" />
       <DivMainSC>
         <DivOneSC>
           <DivSecondSC>

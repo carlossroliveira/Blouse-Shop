@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 // Components
 // -------------------------------------------------
 import { ButtonLink } from '../../components/ButtonLink';
+import { NamePage } from '../../components/NamePage';
 import { SocialNetworks } from '../../components/SocialNetworks';
 // -------------------------------------------------
 // Images
@@ -28,6 +29,7 @@ export const Error = (): JSX.Element => {
   const navigate = useNavigate();
   return (
     <ContainerSC>
+      <NamePage title="Error" />
       <DivOneSC>
         <img src={photo} alt="image error" />
       </DivOneSC>

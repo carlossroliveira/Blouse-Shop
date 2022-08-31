@@ -55,7 +55,7 @@ export const Profile = () => {
   return (
     <ContainerSC>
       <DivHeader>
-        <NamePage title="Camisas" />
+        <NamePage title="Perfil" />
 
         <h1>Logado</h1>
 
