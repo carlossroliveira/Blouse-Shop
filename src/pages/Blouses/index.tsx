@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 import axios from 'axios';
-import { Mirage } from '../../mirage';
 import { Link } from 'react-router-dom';
 
 export const Blouses = () => {
@@ -13,8 +12,6 @@ export const Blouses = () => {
       .then((response) => response.data)
       .then((data) => setUsers(data));
   }, []);
-
-  Mirage();
 
   return (
     <>
