@@ -1,33 +1,16 @@
-import React, { useState } from 'react';
-/* import { useParams } from 'react-router-dom'; */
-/* 
-import axios from 'axios'; */
+import React from 'react';
+import { useFetch } from '../../hooks/useFetch';
+import { useParams } from 'react-router-dom';
 
 export const BlaTwo = () => {
-  /*  const { id } = useParams();
-  const [users, setUsers] = useState([] as any);
-  useEffect(() => {
-    axios
-      .get(`https://api.github.com/users/carlossroliveira/repos/${id}`)
-      .then((response) => response.data)
-      .then((data) => setUsers(data));
-  }, [id]); */
+  const { id } = useParams();
 
-  /*   const { id } = useParams(); */
-  const [post, setPost] = useState({} as any);
-
-  React.useEffect(() => {
-    fetch(`http://localhost:3000/api/posts/`)
-      .then((response) => response.json())
-      .then((json) => setPost(json));
-  }, []);
-
-  console.log(post);
+  const { data } = useFetch<any>(`http://localhost:5000/posts/${id}`);
 
   return (
     <>
-      <h2 className="cartao__titulo">{post.marca}</h2>
-      <h2 className="cartao__titulo">{post.descricao}</h2>
+      <h2 className="cartao__titulo">{data?.marca}</h2>
+      <h2 className="cartao__titulo">{data?.descricao}</h2>
     </>
   );
 };
