@@ -34,8 +34,8 @@ export const AuthProvider = ({ children }: IAuthProvider): JSX.Element => {
     }
   }, []);
 
-  const loginEmail = (e: FormEvent, email: string, password: string) => {
-    e.preventDefault();
+  const loginEmail = (event: FormEvent, email: string, password: string) => {
+    event.preventDefault();
 
     signInWithEmailAndPassword(authFireBase, email, password)
       .then((userCredential) => {
