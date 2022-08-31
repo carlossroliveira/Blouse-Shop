@@ -1,34 +1,37 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import axios from 'axios';
-/* import { Mirage } from '../../mirage'; */
+/* import axios from 'axios'; */
 
 export const Bla = () => {
-  const [users, setUsers] = useState([]);
-  const { id } = useParams();
+  /* const [users, setUsers] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`/list/${id}`)
+      .get('https://api.github.com/users/carlossroliveira/repos')
       .then((response) => response.data)
       .then((data) => setUsers(data));
-  }, [id]);
+  }, []); */
 
-  /* Mirage(); */
+  const [posts, setPosts] = useState([]);
 
-  console.log(users.map((item: any) => item.name));
+  React.useEffect(() => {
+    fetch('http://localhost:3000/api/posts')
+      .then((response) => response.json())
+      .then((json) => setPosts(json));
+  }, []);
 
   return (
     <>
-      <h1>
-        {users.map((item: any) => (
+      <ul>
+        {posts.map((post: any) => (
           <>
-            <p>{item.name}</p>
+            <li key={post.id}>
+              <Link to={`/posts/${post.id}`}>{post.marca}</Link>
+            </li>
           </>
         ))}
-      </h1>
-      {id}
+      </ul>
     </>
   );
 };
