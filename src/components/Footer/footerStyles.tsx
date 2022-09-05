@@ -14,7 +14,7 @@ export const ContainerSC = styled.section`
 `;
 
 export const ParagraphSC = styled.p`
-  color: ${({ theme }) => theme.color.primary};
+  color: ${({ theme }) => theme.color.secondary};
   font-weight: 600;
   font-size: 20px;
 `;
