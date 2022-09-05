@@ -12,7 +12,7 @@ import { useFetch } from '../../hooks/useFetch';
 // -------------------------------------------------
 import { IBProps } from '../../utils/types';
 
-import { ContainerSC } from './blousesStyles';
+import { ContainerSC, ImgSC, ParagraphSC, TituloSC } from './blousesStyles';
 
 export const Blouses = () => {
   const { data } = useFetch<IBProps[]>('http://localhost:5000/posts');
@@ -22,19 +22,18 @@ export const Blouses = () => {
       <ul>
         {data?.map((post: IBProps) => (
           <>
-            {console.log(post.foto?.map((item) => item.titulo))}
             <li key={post.id}>
-              <Link to={`/posts/${post.id}`}>{post.marca}</Link>
+              <Link to={`/posts/${post.id}`}>
+                <ImgSC
+                  src={`${post.foto?.map((item) => item.src)}`}
+                  alt="Camisa de time"
+                />
+              </Link>
 
-              <div>{post.foto?.map((item) => item.titulo)}</div>
+              <TituloSC>{post.foto?.map((item) => item.titulo)}</TituloSC>
 
-              <img src={`${post.foto?.map((item) => item.src)}`} alt="aa" />
-
-              <div>{post.marca}</div>
-              <div>{post.preco}</div>
-              <div>{post.tamanho}</div>
-              <div>{post.tecido}</div>
-              <div>{post.descricao}</div>
+              <ParagraphSC>{post.marca}</ParagraphSC>
+              <ParagraphSC>{post.preco}</ParagraphSC>
             </li>
           </>
         ))}
