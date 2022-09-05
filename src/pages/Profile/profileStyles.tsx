@@ -4,8 +4,6 @@
 import styled from 'styled-components';
 
 export const ContainerSC = styled.section`
-  height: 100vh;
-
   display: grid;
   grid-template-columns: auto;
   grid-auto-rows: 100px auto 100px;
@@ -15,17 +13,48 @@ export const ContainerSC = styled.section`
     'styleTwo'
     'styleThree';
 
-  background-color: tomato;
+  background-color: ${({ theme }) => theme.color.tertiary};
 `;
 
-export const DivHeader = styled.header`
+export const HeaderSC = styled.header`
   grid-area: styleOne;
-  border: 4px solid blue;
+
+  display: flex;
+  padding: 1rem 3rem;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const NavSC = styled.nav`
+  ul {
+    display: flex;
+    list-style: none;
+
+    li + li {
+      margin-left: 1rem;
+    }
+  }
+`;
+
+export const ButtonSC = styled.button<{ disabled?: boolean }>`
+  border: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  transition: filter 0.1s;
+  background-color: transparent;
+  color: ${({ theme }) => theme.color.secondary};
+
+  &:hover {
+    filter: brightness(0.1);
+    cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+    /* -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3); */
+  }
 `;
 
 export const DivMain = styled.main`
   grid-area: styleTwo;
-  border: 4px solid blue;
 `;
 
 export const DivFooter = styled.footer`

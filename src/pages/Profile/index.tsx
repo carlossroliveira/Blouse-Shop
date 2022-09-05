@@ -2,7 +2,7 @@
 // Packages
 // -------------------------------------------------
 import React, { FormEvent } from 'react';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 // -------------------------------------------------
 // Hooks
@@ -11,15 +11,24 @@ import { useAuth } from '../../hooks/useAuth';
 // -------------------------------------------------
 // Component
 // -------------------------------------------------
+import { Title } from '../../components/Title';
 import { Footer } from '../../components/Footer';
 import { NamePage } from '../../components/NamePage';
 // -------------------------------------------------
 // Styles
 // -------------------------------------------------
-import { ContainerSC, DivFooter, DivHeader, DivMain } from './profileStyles';
+import {
+  ButtonSC,
+  ContainerSC,
+  DivFooter,
+  DivMain,
+  HeaderSC,
+  NavSC,
+} from './profileStyles';
 
 export const Profile = () => {
   const auth = useAuth();
+  const path = useLocation();
   const navigate = useNavigate();
 
   const handleClose = async (event: FormEvent) => {
@@ -54,13 +63,31 @@ export const Profile = () => {
 
   return (
     <ContainerSC>
-      <DivHeader>
-        <NamePage title="Perfil" />
+      <NamePage title="Perfil" />
 
-        <h1>Logado</h1>
+      <HeaderSC>
+        {path.pathname === '/posts' ? (
+          <Title title={'Blouse Shop'} />
+        ) : (
+          <Title title={'Chosen Blouse'} />
+        )}
 
-        <button onClick={handleClose}>Sair</button>
-      </DivHeader>
+        <NavSC>
+          <ul>
+            <li>
+              <ButtonSC
+                disabled={path.pathname === '/posts' ? true : false}
+                onClick={() => navigate('/posts')}
+              >
+                Lista
+              </ButtonSC>
+            </li>
+            <li>
+              <ButtonSC onClick={handleClose}>Sair</ButtonSC>
+            </li>
+          </ul>
+        </NavSC>
+      </HeaderSC>
 
       <DivMain>
         <Outlet />
