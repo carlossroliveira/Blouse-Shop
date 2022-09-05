@@ -23,6 +23,8 @@ export const HeaderSC = styled.header`
   padding: 1rem 3rem;
   align-items: center;
   justify-content: space-between;
+
+  border-bottom: 1px solid;
 `;
 
 export const NavSC = styled.nav`
