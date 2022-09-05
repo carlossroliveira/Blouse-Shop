@@ -4,6 +4,7 @@
 import styled from 'styled-components';
 
 export const ContainerSC = styled.section`
+  height: 100vh; ///  pend
   display: grid;
   grid-template-columns: auto;
   grid-auto-rows: 100px auto 100px;
@@ -49,9 +50,6 @@ export const ButtonSC = styled.button<{ disabled?: boolean }>`
   &:hover {
     filter: brightness(0.1);
     cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
-    /* -webkit-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        transform: scale(1.3); */
   }
 `;
 
