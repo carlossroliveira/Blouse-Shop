@@ -4,7 +4,6 @@
 import styled from 'styled-components';
 
 export const ContainerSC = styled.section`
-  height: 100vh; ///  pend
   display: grid;
   grid-template-columns: auto;
   grid-auto-rows: 100px auto 100px;

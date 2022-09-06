@@ -28,6 +28,7 @@ export const ContainerSC = styled.section`
     width: 25rem;
     margin-bottom: 3rem;
     position: relative;
+
     &:hover {
       ${DivSC} {
         display: block;
