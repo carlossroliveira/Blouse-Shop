@@ -11,7 +11,9 @@ import { useFetch } from '../../hooks/useFetch';
 // Types
 // -------------------------------------------------
 import { IBProps } from '../../utils/types';
-
+// -------------------------------------------------
+// Styles
+// -------------------------------------------------
 import { ContainerSC, ImgSC, ParagraphSC, TituloSC } from './blousesStyles';
 
 export const Blouses = () => {
@@ -32,8 +34,21 @@ export const Blouses = () => {
 
               <TituloSC>{post.foto?.map((item) => item.titulo)}</TituloSC>
 
-              <ParagraphSC>{post.marca}</ParagraphSC>
-              <ParagraphSC>{post.preco}</ParagraphSC>
+              <ParagraphSC info>{post.info}</ParagraphSC>
+
+              {post.preco?.map((item, index) => (
+                <>
+                  <ParagraphSC Inactive key={index}>
+                    R$ {item.valorInativo}
+                  </ParagraphSC>
+
+                  <ParagraphSC installments>R$ {item.valorInicial}</ParagraphSC>
+
+                  <ParagraphSC>
+                    Ou {item.valorIniParcelado}x de R$ {item.valorInaParcelado}
+                  </ParagraphSC>
+                </>
+              ))}
             </li>
           </>
         ))}

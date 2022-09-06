@@ -24,7 +24,7 @@ export const BuyBlouse = () => {
         <p>{data?.foto?.map((item) => item.titulo)}</p>
 
         <p>{data?.marca}</p>
-        <p>{data?.preco}</p>
+        {/*  <p>{data?.preco}</p> */}
 
         <p>{data?.tamanho}</p>
         <p>{data?.tecido}</p>

@@ -14,7 +14,7 @@ export const ContainerSC = styled.section`
     'styleTwo'
     'styleThree';
 
-  background-color: ${({ theme }) => theme.color.tertiary};
+  background-color: ${({ theme }) => theme.background.secondary};
 `;
 
 export const HeaderSC = styled.header`
