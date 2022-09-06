@@ -8,8 +8,16 @@
           "src": "https://static.netshoes.com.br/produtos/camisa-esquadrao-bahia-ii-2022-juvenil/08/LPO-0348-008/LPO-0348-008_zoom1.jpg?ts=1651330735&ims=544x"
         }
       ],
+      "info": "Frete Grátis",
       "tamanho": "M",
-      "preco": "R$ 269,90",
+      "preco": [
+        {
+          "valorInativo": "249,00",
+          "valorInicial": "159,90",
+          "valorIniParcelado": "2",
+          "valorInaParcelado": "79,95"
+        }
+      ],
       "tecido": "Aeroready",
       "marca": "Sport",
       "descricao": "Primeiro Campeão Brasileiro! Em busca do acesso à elite do futebol, o Esquadrão de Aço lança a coleção do Bahia para temporada de 2022."
@@ -22,8 +30,16 @@
           "src": "https://static.netshoes.com.br/produtos/camisa-flamengo-i-2223-sn-torcedor-adidas-masculina/68/3ZP-5382-068/3ZP-5382-068_zoom1.jpg?ts=1644858741&ims=544x"
         }
       ],
+      "info": null,
       "tamanho": "M, G, GG",
-      "preco": "R$ 299,99",
+      "preco": [
+        {
+          "valorInativo": "270,00",
+          "valorInicial": "129,99",
+          "valorIniParcelado": "2",
+          "valorInaParcelado": "65,00"
+        }
+      ],
       "tecido": "Aeroready",
       "marca": "Adidas",
       "descricao": "A maior paixão do mundo! Prestando homenagem à emoção que pulsa nas arquibancadas quando o Mengo está em campo."
@@ -36,8 +52,16 @@
           "src": "https://static.netshoes.com.br/produtos/camisa-gremio-i-2122-sn-torcedor-umbro-masculina/58/2IA-0598-058/2IA-0598-058_zoom1.jpg?ts=1619168939&ims=544x"
         }
       ],
+      "info": "Frete Grátis",
       "tamanho": "M, G",
-      "preco": "R$ 119,99",
+      "preco": [
+        {
+          "valorInativo": "200,00",
+          "valorInicial": "249,99",
+          "valorIniParcelado": "4",
+          "valorInaParcelado": "62,50"
+        }
+      ],
       "tecido": "Aeroready",
       "marca": "Marquespan",
       "descricao": "Com o Grêmio onde o Grêmio estiver! O Tricolor entra em campo para mais uma batalha e você fica na torcida devidamente uniformizado com a Camisa Grêmio Umbro Masculina."
@@ -50,8 +74,16 @@
           "src": "https://static.netshoes.com.br/produtos/camisa-vasco-da-gama-i-2223-kappa-jogador-masculina/26/D24-4765-026/D24-4765-026_zoom1.jpg?ts=1653935937&ims=544x"
         }
       ],
+      "info": "Frete Grátis",
       "tamanho": "P, M ,G ,GG",
-      "preco": "R$ 289,99",
+      "preco": [
+        {
+          "valorInativo": "240,00",
+          "valorInicial": "139,90",
+          "valorIniParcelado": "2",
+          "valorInaParcelado": "69,95"
+        }
+      ],
       "tecido": "Poliéster",
       "marca": "Hebron",
       "descricao": "O Gigante da Colina entra em campo para mais uma batalha e você fica na torcida usando a nova Camisa Vasco Masculina da Kappa."
@@ -64,8 +96,16 @@
           "src": "https://static.netshoes.com.br/produtos/camisa-vitoria-i-2223-sn-torcedor-volt-masculina/02/MMC-0496-002/MMC-0496-002_zoom1.jpg?ts=1655332751&ims=544x"
         }
       ],
+      "info": "Frete Grátis",
       "tamanho": "P",
-      "preco": "R$ 188,99",
+      "preco": [
+        {
+          "valorInativo": "150,00",
+          "valorInicial": "139,90",
+          "valorIniParcelado": "2",
+          "valorInaParcelado": "69,95"
+        }
+      ],
       "tecido": "Dry",
       "marca": "Volt",
       "descricao": "Chegou a hora de escolher o seu manto! Desenvolvida em material resistente e aconchegante, a camisa garante um tecido macio, leve e com bom confortavel."
@@ -78,8 +118,16 @@
           "src": "https://static.netshoes.com.br/produtos/camisa-palmeiras-i-2223-sn-torcedor-puma-masculina/54/2I3-3672-054/2I3-3672-054_zoom1.jpg?ts=1643623941&ims=544x"
         }
       ],
+      "info": null,
       "tamanho": "P, M, G, GG, EGG, EEGG",
-      "preco": "R$ 299,99",
+      "preco": [
+        {
+          "valorInativo": "314,99",
+          "valorInicial": "269,90",
+          "valorIniParcelado": "4",
+          "valorInaParcelado": "67,48"
+        }
+      ],
       "tecido": "DryCell",
       "marca": "Puma",
       "descricao": "O Palestra morre líder e o Palmeiras nasce campeão! Há 80 anos, em 1942, nosso alviverde deixava de ser Clube Palestra Itália para se tornar Sociedade Esportiva Palmeiras."
@@ -92,8 +140,16 @@
           "src": "https://static.netshoes.com.br/produtos/camisa-sao-paulo-i-2223-sn-torcedor-adidas-masculina/14/3ZP-5356-014/3ZP-5356-014_zoom1.jpg?ts=1644434784&ims=544x"
         }
       ],
+      "info": "Frete Grátis",
       "tamanho": "P, M, G, GG, EGG, EEGG",
-      "preco": "R$ 299,99",
+      "preco": [
+        {
+          "valorInativo": "299,99",
+          "valorInicial": "279,99",
+          "valorIniParcelado": "4",
+          "valorInaParcelado": "70,00"
+        }
+      ],
       "tecido": "AEROREADY",
       "marca": "Adidas",
       "descricao": "O primeiro título mundial do SPFC completa 30 anos. Para não deixar passar esse marco, o clube e a Adidas homenageiam o feito na nova Camisa Masculina do São Paulo."
@@ -106,8 +162,16 @@
           "src": "https://static.netshoes.com.br/produtos/camisa-internacional-i-2122-sn-torcedor-adidas-masculina/16/NQQ-7767-016/NQQ-7767-016_zoom1.jpg?ts=1616398906&ims=544x"
         }
       ],
+      "info": null,
       "tamanho": "P, M, EGG, EEGG",
-      "preco": "R$ 113,99",
+      "preco": [
+        {
+          "valorInativo": "270,00",
+          "valorInicial": "149,00",
+          "valorIniParcelado": "2",
+          "valorInaParcelado": "74,50"
+        }
+      ],
       "tecido": "AEROREADY",
       "marca": "Adidas",
       "descricao": "Gigante para sempre! Chegou a nova Camisa Internacional Adidas Masculina. Inspirada no glorioso Estádio Beira Rio, o manto titular da temporada 21/22."
@@ -120,8 +184,16 @@
           "src": "https://static.netshoes.com.br/produtos/camisa-corinthians-i-2122-sn-jogador-nike-masculina/28/HZM-6243-028/HZM-6243-028_zoom1.jpg?ts=1645792896&ims=544x"
         }
       ],
+      "info": null,
       "tamanho": "P, M",
-      "preco": "R$ 339,99",
+      "preco": [
+        {
+          "valorInativo": "320,99",
+          "valorInicial": "229,99",
+          "valorIniParcelado": "3",
+          "valorInaParcelado": "76,66"
+        }
+      ],
       "tecido": "Dri-Fit",
       "marca": "Shop Timão",
       "descricao": "Vai na alma! Não é só nas arquibancadas que o bando de loucos faz a festa. Espalhados por todos os cantos da cidade, essa torcida apaixonada não hesita em mostrar seu amor pelo Timão."

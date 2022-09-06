@@ -9,8 +9,16 @@ export interface IBProps {
       src?: string;
     },
   ];
+  info?: string;
   tamanho?: string;
-  preco?: string;
+  preco?: [
+    {
+      valorInativo?: string;
+      valorInicial?: string;
+      valorIniParcelado?: string;
+      valorInaParcelado?: string;
+    },
+  ];
   tecido?: string;
   marca?: string;
   descricao?: string;
