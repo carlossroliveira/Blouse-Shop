@@ -3,11 +3,19 @@
 // -------------------------------------------------
 import styled from 'styled-components';
 
+export const DivSC = styled.div`
+  position: absolute;
+  display: none;
+  top: 20rem;
+  left: 0;
+  right: 0;
+`;
+
 export const ContainerSC = styled.section`
   margin-top: 5rem;
 
   ul {
-    gap: 1rem;
+    gap: 2rem;
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
@@ -19,11 +27,18 @@ export const ContainerSC = styled.section`
     list-style: none;
     width: 25rem;
     margin-bottom: 3rem;
+    position: relative;
+    &:hover {
+      ${DivSC} {
+        display: block;
+      }
+    }
   }
 `;
 
 export const ImgSC = styled.img`
-  width: 20rem;
+  width: 100%;
+  transition: 200ms linear;
 
   &:hover {
     -webkit-transform: scale(1.1);
@@ -43,7 +58,7 @@ export const ParagraphSC = styled.p<{
   info?: boolean;
 }>`
   text-align: initial;
-  margin: 0 0 5px 3rem;
+  margin: 0 0 5px 1rem;
 
   text-decoration: ${({ Inactive }) =>
     Inactive &&

@@ -8,13 +8,23 @@ import { Link } from 'react-router-dom';
 // -------------------------------------------------
 import { useFetch } from '../../hooks/useFetch';
 // -------------------------------------------------
+// Components
+// -------------------------------------------------
+import { Button } from '../../components/Button';
+// -------------------------------------------------
 // Types
 // -------------------------------------------------
 import { IBProps } from '../../utils/types';
 // -------------------------------------------------
 // Styles
 // -------------------------------------------------
-import { ContainerSC, ImgSC, ParagraphSC, TituloSC } from './blousesStyles';
+import {
+  ContainerSC,
+  DivSC,
+  ImgSC,
+  ParagraphSC,
+  TituloSC,
+} from './blousesStyles';
 
 export const Blouses = () => {
   const { data } = useFetch<IBProps[]>('http://localhost:5000/posts');
@@ -49,6 +59,12 @@ export const Blouses = () => {
                   </ParagraphSC>
                 </>
               ))}
+
+              <DivSC>
+                <Link to={`/posts/${post.id}`}>
+                  <Button text="Conferir" />
+                </Link>
+              </DivSC>
             </li>
           </>
         ))}
