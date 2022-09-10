@@ -51,12 +51,12 @@ export const ParagraphSC = styled.p<{
     InstallmentsTwo &&
     'color: #90caf9; font-size: 1.2rem; font-weight: 700; line-height: 24px; margin-top: 1rem'};
 
-  ${({ Info: info }) =>
-    info &&
+  ${({ Info }) =>
+    Info &&
     'color: #04d483;font-size: 1.4rem; font-weight: 600; text-transform: uppercase;padding: 0;'};
 
-  ${({ Title: title }) =>
-    title && 'color: #383838;font-size: 1.2rem; font-weight: 700;'};
+  ${({ Title }) =>
+    Title && 'color: #383838;font-size: 1.2rem; font-weight: 700;'};
 `;
 
 export const DivFourSC = styled.div`
@@ -67,8 +67,14 @@ export const DivThreeSC = styled.div`
   margin-top: 40px;
 `;
 
-export const SizeSC = styled.span`
+export const DivSizeSC = styled.div`
   display: flex;
+  margin-top: 5px;
+`;
+
+export const SizeButtonSC = styled.button<{ Background: boolean }>`
+  display: flex;
+  justify-content: center;
   padding: 0 7px;
   height: 28px;
   min-width: 28px;
@@ -79,6 +85,21 @@ export const SizeSC = styled.span`
   font-weight: 700;
   text-decoration: none;
   border: 1px solid #ccc;
-  width: 1rem;
+  width: fit-content;
   margin-top: 5px;
+  transition: filter 0.2s;
+  transition: 200ms linear;
+  & + & {
+    margin-left: 5px;
+  }
+  &:hover {
+    filter: brightness(0.9);
+    cursor: pointer;
+    border: 1px solid
+      ${({ Background, theme }) =>
+        Background ? theme.color.tertiary : theme.color.secondary};
+  }
+
+  ${({ Background }) =>
+    Background && 'background-color: #383838; color: #f8f8f8'};
 `;

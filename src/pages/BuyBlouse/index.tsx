@@ -1,7 +1,7 @@
 // -------------------------------------------------
 // Packages
 // -------------------------------------------------
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { FaShippingFast } from 'react-icons/fa';
 // -------------------------------------------------
@@ -23,16 +23,26 @@ import {
   ContainerSC,
   DivFourSC,
   DivSC,
+  DivSizeSC,
   DivThreeSC,
   DivTwoSC,
   ImgSC,
   ParagraphSC,
-  SizeSC,
+  SizeButtonSC,
 } from './buyBlouseStyles';
 
 export const BuyBlouse = () => {
   const { id } = useParams();
   const { data } = useFetch<IBProps>(`http://localhost:5000/posts/${id}`);
+
+  const [size, setSize] = useState<string | undefined>('');
+
+  const verifyIsSelected = useCallback(
+    (selected: string) => {
+      return size === selected;
+    },
+    [size],
+  );
 
   return (
     <ContainerSC>
@@ -74,9 +84,63 @@ export const BuyBlouse = () => {
 
           <DivThreeSC>
             <ParagraphSC>
-              <span>Tamanho:</span>
-              <SizeSC>{data?.tamanho?.slice(0, 1)}</SizeSC>
-              <SizeSC>{data?.tamanho?.slice(2, 4)}</SizeSC>
+              <span>Tamanho: {size}</span>
+
+              <DivSizeSC>
+                {data?.tamanho?.slice(0, 1) && (
+                  <SizeButtonSC
+                    Background={verifyIsSelected(data?.tamanho?.slice(0, 1))}
+                    onClick={() => setSize(data?.tamanho?.slice(0, 1))}
+                  >
+                    {data?.tamanho?.slice(0, 1)}
+                  </SizeButtonSC>
+                )}
+
+                {data?.tamanho?.slice(3, 4) && (
+                  <SizeButtonSC
+                    Background={verifyIsSelected(data?.tamanho?.slice(3, 4))}
+                    onClick={() => setSize(data?.tamanho?.slice(3, 4))}
+                  >
+                    {data?.tamanho?.slice(3, 4)}
+                  </SizeButtonSC>
+                )}
+
+                {data?.tamanho?.slice(6, 7) && (
+                  <SizeButtonSC
+                    Background={verifyIsSelected(data?.tamanho?.slice(6, 7))}
+                    onClick={() => setSize(data?.tamanho?.slice(6, 7))}
+                  >
+                    {data?.tamanho?.slice(6, 7)}
+                  </SizeButtonSC>
+                )}
+
+                {data?.tamanho?.slice(9, 11) && (
+                  <SizeButtonSC
+                    Background={verifyIsSelected(data?.tamanho?.slice(9, 11))}
+                    onClick={() => setSize(data?.tamanho?.slice(9, 11))}
+                  >
+                    {data?.tamanho?.slice(9, 11)}
+                  </SizeButtonSC>
+                )}
+
+                {data?.tamanho?.slice(13, 16) && (
+                  <SizeButtonSC
+                    Background={verifyIsSelected(data?.tamanho?.slice(13, 16))}
+                    onClick={() => setSize(data?.tamanho?.slice(13, 16))}
+                  >
+                    {data?.tamanho?.slice(13, 16)}
+                  </SizeButtonSC>
+                )}
+
+                {data?.tamanho?.slice(18, 22) && (
+                  <SizeButtonSC
+                    Background={verifyIsSelected(data?.tamanho?.slice(18, 22))}
+                    onClick={() => setSize(data?.tamanho?.slice(18, 22))}
+                  >
+                    {data?.tamanho?.slice(18, 22)}
+                  </SizeButtonSC>
+                )}
+              </DivSizeSC>
             </ParagraphSC>
             <ParagraphSC>
               <span>Tercido:</span> {data?.tecido}
