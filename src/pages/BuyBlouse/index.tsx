@@ -2,7 +2,7 @@
 // Packages
 // -------------------------------------------------
 import React, { useCallback, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { FaShippingFast } from 'react-icons/fa';
 // -------------------------------------------------
 // Hooks
@@ -22,6 +22,7 @@ import { IBProps } from '../../utils/types';
 import {
   ContainerSC,
   DivFourSC,
+  DivOneSC,
   DivSC,
   DivSizeSC,
   DivThreeSC,
@@ -44,15 +45,40 @@ export const BuyBlouse = () => {
     [size],
   );
 
+  const [count, setCount] = useState(1);
+
+  const DireitaaaaEEE = () => {
+    if (count >= 1) {
+      setCount(count - 1);
+      console.log('aaaaaaaaaaaaaaaa');
+    }
+  };
+
+  const Direitaaaa = () => {
+    if (count <= 9) {
+      setCount(count + 1);
+    }
+  };
+
+  console.log(Number(id));
+
   return (
     <ContainerSC>
       <NamePage title="Camisas" />
 
       <DivSC>
-        <ImgSC
-          src={`${data?.foto?.map((item) => item.src)}`}
-          alt="Camisa de time"
-        />
+        <DivOneSC>
+          <Link to={`/posts/0${count}`}>
+            <button onClick={DireitaaaaEEE}>DireitaaaaEEE</button>
+          </Link>
+          <ImgSC
+            src={`${data?.foto?.map((item) => item.src)}`}
+            alt="Camisa de time"
+          />
+          <Link to={`/posts/0${count}`}>
+            <button onClick={Direitaaaa}>Direita</button>
+          </Link>
+        </DivOneSC>
 
         <DivTwoSC>
           {data?.info && (
@@ -61,11 +87,11 @@ export const BuyBlouse = () => {
             </ParagraphSC>
           )}
 
-          <ParagraphSC Title>
-            {data?.foto?.map((item) => item.titulo)}
-          </ParagraphSC>
-
           <DivFourSC>
+            <ParagraphSC Title>
+              {data?.foto?.map((item) => item.titulo)}
+            </ParagraphSC>
+
             {data?.preco?.map((item, index) => (
               <>
                 <ParagraphSC Inactive key={index}>
@@ -142,12 +168,15 @@ export const BuyBlouse = () => {
                 )}
               </DivSizeSC>
             </ParagraphSC>
+
             <ParagraphSC>
               <span>Tercido:</span> {data?.tecido}
             </ParagraphSC>
+
             <ParagraphSC>
               <span>Marca:</span> {data?.marca}
             </ParagraphSC>
+
             <ParagraphSC>
               <span>Descrição:</span> {data?.descricao}
             </ParagraphSC>

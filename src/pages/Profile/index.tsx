@@ -2,8 +2,8 @@
 // Packages
 // -------------------------------------------------
 import React, { FormEvent } from 'react';
-import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 // -------------------------------------------------
 // Hooks
 // -------------------------------------------------
@@ -69,7 +69,7 @@ export const Profile = () => {
         {path.pathname === '/posts' ? (
           <Title title={'Blouse Shop'} />
         ) : (
-          <Title title={'Chosen Blouse'} />
+          <Title title={'Blouse'} />
         )}
 
         <NavSC>
@@ -82,6 +82,7 @@ export const Profile = () => {
                 Lista
               </ButtonSC>
             </li>
+
             <li>
               <ButtonSC onClick={handleClose}>Sair</ButtonSC>
             </li>

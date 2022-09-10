@@ -14,16 +14,33 @@ export const ContainerSC = styled.section`
 export const DivSC = styled.div`
   gap: 1rem;
   display: flex;
-  width: 60rem;
+  flex-wrap: wrap;
+  align-items: center;
 
-  margin: 0 auto;
+  margin: 0rem 5rem;
 `;
 
 export const ImgSC = styled.img`
   width: 30rem;
+
+  @media (max-width: 975px) {
+    width: 100%;
+  }
 `;
 
-export const DivTwoSC = styled.div``;
+export const DivOneSC = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+`;
+
+export const DivTwoSC = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  flex: 1 500px;
+`;
 
 export const ParagraphSC = styled.p<{
   Inactive?: boolean;
