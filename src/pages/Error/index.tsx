@@ -27,6 +27,7 @@ import {
 
 export const Error = (): JSX.Element => {
   const navigate = useNavigate();
+
   return (
     <ContainerSC>
       <NamePage title="Error" />

@@ -2,7 +2,7 @@
 // Packages
 // -------------------------------------------------
 import React, { useCallback, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { FaShippingFast } from 'react-icons/fa';
 // -------------------------------------------------
 // Hooks
@@ -45,22 +45,25 @@ export const BuyBlouse = () => {
     [size],
   );
 
-  const [count, setCount] = useState(1);
+  const navigate = useNavigate();
 
-  const DireitaaaaEEE = () => {
+  const [count, setCount] = useState<number>(Number(id) + 1);
+
+  const leftFunction = () => {
     if (count >= 1) {
       setCount(count - 1);
-      console.log('aaaaaaaaaaaaaaaa');
     }
   };
 
-  const Direitaaaa = () => {
+  const rightFunction = () => {
     if (count <= 9) {
       setCount(count + 1);
     }
   };
 
-  console.log(Number(id));
+  React.useEffect(() => {
+    navigate(`/posts/0${count}`);
+  }, [count, navigate]);
 
   return (
     <ContainerSC>
@@ -68,16 +71,22 @@ export const BuyBlouse = () => {
 
       <DivSC>
         <DivOneSC>
-          <Link to={`/posts/0${count}`}>
-            <button onClick={DireitaaaaEEE}>DireitaaaaEEE</button>
-          </Link>
+          <button
+            disabled={Number(id) === 1 ? true : false}
+            onClick={leftFunction}
+          >
+            Esquerda
+          </button>
           <ImgSC
             src={`${data?.foto?.map((item) => item.src)}`}
             alt="Camisa de time"
           />
-          <Link to={`/posts/0${count}`}>
-            <button onClick={Direitaaaa}>Direita</button>
-          </Link>
+          <button
+            disabled={Number(id) === 9 ? true : false}
+            onClick={rightFunction}
+          >
+            Direita
+          </button>
         </DivOneSC>
 
         <DivTwoSC>
