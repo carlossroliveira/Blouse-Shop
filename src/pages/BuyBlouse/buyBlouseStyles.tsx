@@ -40,6 +40,8 @@ export const DivTwoSC = styled.div`
   align-items: center;
 
   flex: 1 500px;
+
+  position: relative;
 `;
 
 export const ParagraphSC = styled.p<{
@@ -70,18 +72,18 @@ export const ParagraphSC = styled.p<{
 
   ${({ Info }) =>
     Info &&
-    'color: #04d483;font-size: 1.4rem; font-weight: 600; text-transform: uppercase;padding: 0;'};
+    'color: #04d483;font-size: 1.4rem; font-weight: 600; text-transform: uppercase;padding: 0; margin-top: 0;'};
 
   ${({ Title }) =>
     Title && 'color: #383838;font-size: 1.2rem; font-weight: 700;'};
 `;
 
 export const DivFourSC = styled.div`
-  margin-top: 30px;
+  margin-top: 0px;
 `;
 
 export const DivThreeSC = styled.div`
-  margin-top: 40px;
+  margin-top: 0px;
 `;
 
 export const DivSizeSC = styled.div`
@@ -119,4 +121,23 @@ export const SizeButtonSC = styled.button<{ Background: boolean }>`
 
   ${({ Background }) =>
     Background && 'background-color: #383838; color: #f8f8f8'};
+`;
+
+export const DivShieldSC = styled.div`
+  position: absolute;
+  right: 1rem;
+  top: -1rem;
+`;
+
+export const ImgShieldSC = styled.img`
+  width: 15rem;
+`;
+
+export const DivBuySC = styled.div`
+  display: flex;
+  gap: 5rem;
+
+  section {
+    margin-right: 6rem;
+  }
 `;

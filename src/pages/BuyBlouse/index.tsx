@@ -1,7 +1,7 @@
 // -------------------------------------------------
 // Packages
 // -------------------------------------------------
-import React, { useCallback, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaShippingFast } from 'react-icons/fa';
 import { useNavigate, useParams } from 'react-router-dom';
 import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs';
@@ -13,6 +13,7 @@ import { useFetch } from '../../hooks/useFetch';
 // Components
 // -------------------------------------------------
 import { NamePage } from '../../components/NamePage';
+import { ButtonLink } from '../../components/ButtonLink';
 // -------------------------------------------------
 // Types
 // -------------------------------------------------
@@ -22,47 +23,37 @@ import { IBProps } from '../../utils/types';
 // -------------------------------------------------
 import {
   ContainerSC,
+  DivBuySC,
   DivFourSC,
   DivOneSC,
   DivSC,
+  DivShieldSC,
   DivSizeSC,
   DivThreeSC,
   DivTwoSC,
   ImgSC,
+  ImgShieldSC,
   ParagraphSC,
   SizeButtonSC,
 } from './buyBlouseStyles';
 
 export const BuyBlouse = () => {
   const { id } = useParams();
-  const { data } = useFetch<IBProps>(`http://localhost:5000/posts/${id}`);
-
-  const [size, setSize] = useState<string | undefined>('');
-
-  const verifyIsSelected = useCallback(
-    (selected: string) => {
-      return size === selected;
-    },
-    [size],
-  );
-
   const navigate = useNavigate();
 
+  const [size, setSize] = useState<string | undefined>('');
   const [count, setCount] = useState<number>(Number(id) + 1);
 
-  const leftFunction = () => {
-    if (count >= 1) {
-      setCount(count - 1);
-    }
-  };
+  const { data } = useFetch<IBProps>(`http://localhost:5000/posts/${id}`);
 
-  const rightFunction = () => {
-    if (count <= 9) {
-      setCount(count + 1);
-    }
-  };
+  const verifyIsSelected = (selected: string) => size === selected;
 
-  React.useEffect(() => {
+  const leftFunction = () => count >= 1 && setCount(count - 1);
+
+  const rightFunction = () => count <= 9 && setCount(count + 1);
+
+  useEffect(() => {
+    setSize('');
     navigate(`/posts/0${count}`);
   }, [count, navigate]);
 
@@ -91,13 +82,13 @@ export const BuyBlouse = () => {
         </DivOneSC>
 
         <DivTwoSC>
-          {data?.info && (
-            <ParagraphSC Info>
-              <FaShippingFast /> {data?.info}
-            </ParagraphSC>
-          )}
-
           <DivFourSC>
+            {data?.info && (
+              <ParagraphSC Info>
+                <FaShippingFast /> {data?.info}
+              </ParagraphSC>
+            )}
+
             <ParagraphSC Title>
               {data?.foto?.map((item) => item.titulo)}
             </ParagraphSC>
@@ -117,6 +108,16 @@ export const BuyBlouse = () => {
               </>
             ))}
           </DivFourSC>
+
+          <DivShieldSC>
+            {data?.foto?.map((item) => (
+              <ImgShieldSC
+                key={item.titulo}
+                src={item.shield}
+                alt="Escudo do time"
+              />
+            ))}
+          </DivShieldSC>
 
           <DivThreeSC>
             <ParagraphSC>
@@ -187,12 +188,31 @@ export const BuyBlouse = () => {
               <span>Marca:</span> {data?.marca}
             </ParagraphSC>
 
-            <ParagraphSC>
-              <span>Descrição:</span> {data?.descricao}
-            </ParagraphSC>
+            <DivBuySC>
+              <ParagraphSC>
+                <span>Descrição:</span> {data?.descricao}
+              </ParagraphSC>
+
+              <ButtonLink
+                text="Comprar"
+                onClick={() => alert('Comprar')}
+                color="black"
+              />
+
+              <button onClick={() => alert('Comprar')}>aaaaaaaa</button>
+            </DivBuySC>
           </DivThreeSC>
         </DivTwoSC>
       </DivSC>
     </ContainerSC>
   );
 };
+
+/* 
+
+position: absolute;
+    width: 30rem;
+    right: -1rem;
+    top: 7rem; 
+    
+    */

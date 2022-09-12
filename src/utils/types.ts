@@ -7,6 +7,7 @@ export interface IBProps {
     {
       titulo?: string;
       src?: string;
+      shield?: string;
     },
   ];
   info?: string;
