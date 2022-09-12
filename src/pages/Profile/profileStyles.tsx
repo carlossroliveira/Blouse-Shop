@@ -54,6 +54,7 @@ export const ButtonSC = styled.button<{ disabled?: boolean }>`
 
 export const DivMain = styled.main`
   grid-area: styleTwo;
+  margin-top: 33px;
 `;
 
 export const DivFooter = styled.footer`

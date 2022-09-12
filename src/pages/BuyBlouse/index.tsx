@@ -25,6 +25,7 @@ import {
   ContainerSC,
   DivBuySC,
   DivFourSC,
+  DivOneButtonSC,
   DivOneSC,
   DivSC,
   DivShieldSC,
@@ -63,22 +64,24 @@ export const BuyBlouse = () => {
 
       <DivSC>
         <DivOneSC>
-          <button
+          <DivOneButtonSC
+            Disabled={Number(id) === 1 ? true : false}
             disabled={Number(id) === 1 ? true : false}
             onClick={leftFunction}
           >
             <BsArrowLeftCircle />
-          </button>
+          </DivOneButtonSC>
           <ImgSC
             src={`${data?.foto?.map((item) => item.src)}`}
             alt="Camisa de time"
           />
-          <button
+          <DivOneButtonSC
+            Disabled={Number(id) === 9 ? true : false}
             disabled={Number(id) === 9 ? true : false}
             onClick={rightFunction}
           >
             <BsArrowRightCircle />
-          </button>
+          </DivOneButtonSC>
         </DivOneSC>
 
         <DivTwoSC>

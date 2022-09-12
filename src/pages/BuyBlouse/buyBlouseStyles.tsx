@@ -7,8 +7,6 @@ export const ContainerSC = styled.section`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-
-  height: calc(100vh - 200px);
 `;
 
 export const DivSC = styled.div`
@@ -36,15 +34,15 @@ export const DivOneSC = styled.div`
   @media (max-width: 1520px) {
     margin: 0 auto;
   }
+`;
 
-  button {
-    border: none;
-    font-size: 2rem;
-    background-color: transparent;
+export const DivOneButtonSC = styled.button<{ Disabled: boolean }>`
+  border: none;
+  font-size: 2rem;
+  background-color: transparent;
 
-    &:hover {
-      cursor: pointer;
-    }
+  &:hover {
+    cursor: ${({ Disabled }) => (Disabled ? 'default' : 'pointer')};
   }
 `;
 
