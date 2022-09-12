@@ -37,6 +37,7 @@ import {
   ParagraphSC,
   SizeButtonSC,
 } from './buyBlouseStyles';
+import { ModalComponent } from '../../components/ModalComponent';
 
 export const BuyBlouse = () => {
   const { id } = useParams();
@@ -200,18 +201,11 @@ export const BuyBlouse = () => {
                 Comprar agora
               </ButtonBuySC>
             </DivBuySC>
+
+            <ModalComponent />
           </DivThreeSC>
         </DivTwoSC>
       </DivSC>
     </ContainerSC>
   );
 };
-
-/* 
-
-position: absolute;
-    width: 30rem;
-    right: -1rem;
-    top: 7rem; 
-    
-    */

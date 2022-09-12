@@ -15,7 +15,7 @@ export const DivSC = styled.div`
   flex-wrap: wrap;
   align-items: center;
 
-  margin: 0rem 4rem;
+  margin: 0rem 3rem;
 `;
 
 export const ImgSC = styled.img`
@@ -43,6 +43,12 @@ export const DivOneButtonSC = styled.button<{ Disabled: boolean }>`
 
   &:hover {
     cursor: ${({ Disabled }) => (Disabled ? 'default' : 'pointer')};
+  }
+
+  filter: brightness(0.7);
+
+  svg {
+    color: ${({ theme }) => theme.color.quinary};
   }
 `;
 
