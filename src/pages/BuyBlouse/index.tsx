@@ -13,7 +13,6 @@ import { useFetch } from '../../hooks/useFetch';
 // Components
 // -------------------------------------------------
 import { NamePage } from '../../components/NamePage';
-import { ButtonLink } from '../../components/ButtonLink';
 // -------------------------------------------------
 // Types
 // -------------------------------------------------
@@ -22,6 +21,7 @@ import { IBProps } from '../../utils/types';
 // Styles
 // -------------------------------------------------
 import {
+  ButtonBuySC,
   ContainerSC,
   DivBuySC,
   DivFourSC,
@@ -193,13 +193,9 @@ export const BuyBlouse = () => {
                 <span>Descrição:</span> {data?.descricao}
               </ParagraphSC>
 
-              <ButtonLink
-                text="Comprar"
-                onClick={() => alert('Comprar')}
-                color="black"
-              />
-
-              <button onClick={() => alert('Comprar')}>aaaaaaaa</button>
+              <ButtonBuySC onClick={() => alert('Comprar')}>
+                Comprar agora
+              </ButtonBuySC>
             </DivBuySC>
           </DivThreeSC>
         </DivTwoSC>

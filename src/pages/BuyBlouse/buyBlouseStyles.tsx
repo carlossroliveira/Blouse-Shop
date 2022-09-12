@@ -17,7 +17,7 @@ export const DivSC = styled.div`
   flex-wrap: wrap;
   align-items: center;
 
-  margin: 0rem 5rem;
+  margin: 0rem 4rem;
 `;
 
 export const ImgSC = styled.img`
@@ -32,6 +32,20 @@ export const DivOneSC = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+
+  @media (max-width: 1520px) {
+    margin: 0 auto;
+  }
+
+  button {
+    border: none;
+    font-size: 2rem;
+    background-color: transparent;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 `;
 
 export const DivTwoSC = styled.div`
@@ -127,17 +141,61 @@ export const DivShieldSC = styled.div`
   position: absolute;
   right: 1rem;
   top: -1rem;
+
+  @media (max-width: 975px) {
+    display: none;
+  }
 `;
 
 export const ImgShieldSC = styled.img`
   width: 15rem;
+
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+
+  &:hover {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
 `;
 
 export const DivBuySC = styled.div`
-  display: flex;
   gap: 5rem;
+  display: flex;
+  align-items: end;
+
+  @media (max-width: 975px) {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+  }
 
   section {
     margin-right: 6rem;
+  }
+`;
+
+export const ButtonBuySC = styled.button`
+  width: 40rem;
+  height: 4rem;
+  background-color: ${({ theme }) => theme.color.quinary};
+
+  border: none;
+  font-weight: 700;
+  border-radius: 5px;
+  text-transform: uppercase;
+
+  box-shadow: ${({ theme }) => theme.boxShadow.secondary};
+  transition: filter 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(0.9);
+  }
+
+  @media (max-width: 975px) {
+    width: fit-content;
   }
 `;
