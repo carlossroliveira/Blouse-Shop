@@ -95,7 +95,7 @@ export const Profile = () => {
       </DivMain>
 
       <DivFooter>
-        <Footer />
+        <Footer color="black" />
       </DivFooter>
     </ContainerSC>
   );

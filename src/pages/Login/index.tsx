@@ -112,7 +112,7 @@ export const Login = () => {
               />
             </DivSocialSC>
 
-            <Footer />
+            <Footer color="white" />
           </DivSecondSC>
         </DivOneSC>
 

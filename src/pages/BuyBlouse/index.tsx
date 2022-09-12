@@ -2,8 +2,9 @@
 // Packages
 // -------------------------------------------------
 import React, { useCallback, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
 import { FaShippingFast } from 'react-icons/fa';
+import { useNavigate, useParams } from 'react-router-dom';
+import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs';
 // -------------------------------------------------
 // Hooks
 // -------------------------------------------------
@@ -75,7 +76,7 @@ export const BuyBlouse = () => {
             disabled={Number(id) === 1 ? true : false}
             onClick={leftFunction}
           >
-            Esquerda
+            <BsArrowLeftCircle />
           </button>
           <ImgSC
             src={`${data?.foto?.map((item) => item.src)}`}
@@ -85,7 +86,7 @@ export const BuyBlouse = () => {
             disabled={Number(id) === 9 ? true : false}
             onClick={rightFunction}
           >
-            Direita
+            <BsArrowRightCircle />
           </button>
         </DivOneSC>
 

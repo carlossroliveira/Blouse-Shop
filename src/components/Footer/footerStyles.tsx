@@ -13,8 +13,9 @@ export const ContainerSC = styled.section`
   }
 `;
 
-export const ParagraphSC = styled.p`
-  color: ${({ theme }) => theme.color.secondary};
+export const ParagraphSC = styled.p<{ Color: 'black' | 'white' }>`
   font-weight: 600;
   font-size: 20px;
+  color: ${({ Color, theme }) => Color === 'black' && theme.color.secondary};
+  color: ${({ Color, theme }) => Color === 'white' && theme.color.primary};
 `;
