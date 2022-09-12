@@ -30,6 +30,7 @@ export interface ITheme {
   };
   boxShadow: {
     primary: string;
+    secondary: string;
   };
 }
 
