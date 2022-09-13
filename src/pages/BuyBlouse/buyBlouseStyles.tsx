@@ -43,12 +43,12 @@ export const DivOneButtonSC = styled.button<{ Disabled: boolean }>`
 
   &:hover {
     cursor: ${({ Disabled }) => (Disabled ? 'default' : 'pointer')};
+    filter: brightness(0.7);
   }
 
-  filter: brightness(0.7);
-
   svg {
-    color: ${({ theme }) => theme.color.quinary};
+    color: ${({ Disabled, theme }) =>
+      Disabled ? '#ccc' : theme.color.quinary};
   }
 `;
 
