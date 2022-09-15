@@ -27,6 +27,7 @@ import {
   ParagraphInfoSC,
   ParagraphSC,
   TitleSC,
+  ButtonBuySC,
 } from './modalStyles';
 // -------------------------------------------------
 // Types
@@ -80,7 +81,7 @@ export const ModalComponent = () => {
 
   return (
     <>
-      <button onClick={openModal}>Open Modal</button>
+      <ButtonBuySC onClick={openModal}>Comprar agora</ButtonBuySC>
 
       <Modal
         isOpen={modalIsOpen}

@@ -13,6 +13,7 @@ import { useFetch } from '../../hooks/useFetch';
 // Components
 // -------------------------------------------------
 import { NamePage } from '../../components/NamePage';
+import { ModalComponent } from '../../components/ModalComponent';
 // -------------------------------------------------
 // Types
 // -------------------------------------------------
@@ -21,7 +22,6 @@ import { IBProps } from '../../utils/types';
 // Styles
 // -------------------------------------------------
 import {
-  ButtonBuySC,
   ContainerSC,
   DivBuySC,
   DivFourSC,
@@ -37,13 +37,14 @@ import {
   ParagraphSC,
   SizeButtonSC,
 } from './buyBlouseStyles';
-import { ModalComponent } from '../../components/ModalComponent';
 
 export const BuyBlouse = () => {
   const { id } = useParams();
+
   const navigate = useNavigate();
 
   const [size, setSize] = useState<string | undefined>('');
+
   const [count, setCount] = useState<number>(Number(id) + 1);
 
   const { data } = useFetch<IBProps>(`http://localhost:5000/posts/${id}`);
@@ -197,12 +198,8 @@ export const BuyBlouse = () => {
                 <span>Descrição:</span> {data?.descricao}
               </ParagraphSC>
 
-              <ButtonBuySC onClick={() => alert('Comprar')}>
-                Comprar agora
-              </ButtonBuySC>
+              <ModalComponent />
             </DivBuySC>
-
-            <ModalComponent />
           </DivThreeSC>
         </DivTwoSC>
       </DivSC>

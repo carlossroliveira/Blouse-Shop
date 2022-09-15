@@ -180,26 +180,3 @@ export const DivBuySC = styled.div`
     margin-right: 6rem;
   }
 `;
-
-export const ButtonBuySC = styled.button`
-  width: 40rem;
-  height: 4rem;
-  background-color: ${({ theme }) => theme.color.quinary};
-
-  border: none;
-  font-weight: 700;
-  border-radius: 5px;
-  text-transform: uppercase;
-
-  box-shadow: ${({ theme }) => theme.boxShadow.secondary};
-  transition: filter 0.2s;
-
-  &:hover {
-    cursor: pointer;
-    filter: brightness(0.9);
-  }
-
-  @media (max-width: 975px) {
-    width: fit-content;
-  }
-`;
