@@ -2,11 +2,10 @@
 // Packages
 // -------------------------------------------------
 import React, { useState } from 'react';
-import Modal from 'react-modal';
-import { useNavigate, useParams } from 'react-router-dom';
-import { useFetch } from '../../hooks/useFetch';
-import { IBProps } from '../../utils/types';
 import Swal from 'sweetalert2';
+import Modal from 'react-modal';
+import { useFetch } from '../../hooks/useFetch';
+import { useNavigate, useParams } from 'react-router-dom';
 // -------------------------------------------------
 // Styles
 // -------------------------------------------------
@@ -14,11 +13,14 @@ import {
   ButtonSC,
   ContainerSC,
   customStyles,
+  DivCodeZipButtonSC,
+  MainSC,
   DivContentOneSC,
   DivContentSubSC,
   DivContentTwoSC,
   DivInfoSC,
   DivInfoTwoSC,
+  DivInputSC,
   DivOneSC,
   DivTwoSC,
   ImgSC,
@@ -29,6 +31,7 @@ import {
 // -------------------------------------------------
 // Types
 // -------------------------------------------------
+import { IBProps } from '../../utils/types';
 
 export const ModalComponent = () => {
   const { id } = useParams();
@@ -38,6 +41,8 @@ export const ModalComponent = () => {
   const { data } = useFetch<IBProps>(`http://localhost:5000/posts/${id}`);
 
   const [modalIsOpen, setIsOpen] = useState<boolean>(false);
+
+  const [generator, setGenerator] = useState<string>('');
 
   const openModal = () => setIsOpen(true);
 
@@ -70,6 +75,9 @@ export const ModalComponent = () => {
     }
   };
 
+  const handleGenerator = () =>
+    setGenerator(`receba até ${Math.floor(Math.random() * 30)} de setembro`);
+
   return (
     <>
       <button onClick={openModal}>Open Modal</button>
@@ -86,7 +94,6 @@ export const ModalComponent = () => {
 
             <DivInfoSC>
               <ParagraphInfoSC>produto</ParagraphInfoSC>
-              <ParagraphInfoSC>dia da compra</ParagraphInfoSC>
               <ParagraphInfoSC>entrega</ParagraphInfoSC>
             </DivInfoSC>
 
@@ -100,11 +107,7 @@ export const ModalComponent = () => {
                 <h4>{data?.foto?.map((item) => item.titulo)}</h4>
               </ParagraphInfoSC>
 
-              <ParagraphInfoSC>
-                <input type="date" />
-              </ParagraphInfoSC>
-
-              <ParagraphInfoSC>-</ParagraphInfoSC>
+              <ParagraphInfoSC> {generator ? generator : '-'} </ParagraphInfoSC>
             </DivInfoTwoSC>
           </DivOneSC>
 
@@ -122,7 +125,7 @@ export const ModalComponent = () => {
                 </ParagraphSC>
               </DivContentSubSC>
 
-              <ParagraphSC>frete</ParagraphSC>
+              <ParagraphSC>frete {generator && ': gratis'}</ParagraphSC>
             </DivContentOneSC>
 
             <div>
@@ -160,6 +163,16 @@ export const ModalComponent = () => {
                 </ParagraphSC>
               </DivContentTwoSC>
             </div>
+
+            <h4>calcule frete e prazo</h4>
+
+            <MainSC>
+              <DivInputSC type="text" placeholder="Ex: 41900-000" />
+
+              <DivCodeZipButtonSC onClick={handleGenerator}>
+                ok
+              </DivCodeZipButtonSC>
+            </MainSC>
 
             <ButtonSC onClick={handleFinish}>Finalizar</ButtonSC>
           </DivTwoSC>

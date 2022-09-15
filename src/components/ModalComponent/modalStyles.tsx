@@ -51,6 +51,35 @@ export const ImgSC = styled.img`
   width: 10rem;
 `;
 
+export const MainSC = styled.div`
+  display: flex;
+`;
+
+export const DivInputSC = styled.input`
+  cursor: text;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 1rem;
+  border-color: #f80032;
+`;
+
+export const DivCodeZipButtonSC = styled.button`
+  background-color: white;
+  color: #f80032;
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 6px;
+  border: 2px solid #f80032;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 10px;
+
+  transition: filter 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(0.9);
+  }
+`;
+
 //===================== DivTwoSC
 
 export const DivTwoSC = styled.div`
