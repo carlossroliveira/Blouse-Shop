@@ -8,18 +8,27 @@ import { render, screen } from '@testing-library/react';
 // -------------------------------------------------
 // Components
 // -------------------------------------------------
-import { Login } from '../../pages/Login';
+import { Button } from '../../components/Button';
 // -------------------------------------------------
 // Utils
 // -------------------------------------------------
 import WithThemeComponent from '../../utils/withThemeComponent';
 
-const LoginWithTheme = WithThemeComponent(Login);
+const LoginWithTheme = WithThemeComponent(Button);
 
-describe('Login Testing', () => {
-  it('Should...', () => {
-    render(<LoginWithTheme />);
+describe('Testing error button', () => {
+  it('Should render the button correctly', () => {
+    render(<LoginWithTheme text={'Button'} />);
 
-    screen.debug();
+    expect(
+      screen.getByRole('button', {
+        name: /button/i,
+      }),
+    ).toBeInTheDocument();
+  });
+
+  it('component rendering matches snapshot correctly', () => {
+    render(<LoginWithTheme text={'Button'} />);
+    expect(render(<LoginWithTheme text={'Button'} />)).toMatchSnapshot();
   });
 });

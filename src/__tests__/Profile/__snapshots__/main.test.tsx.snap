@@ -1,0 +1,453 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing error profile component rendering matches snapshot correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": .c2 {
+  color: #0000;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 2.5rem;
+  line-height: 1.2em;
+  text-shadow: 0 0 #383838,0 1.2em #383838;
+}
+
+.c2:hover {
+  text-shadow: 0 -1.2em #383838,0 0 #383838;
+}
+
+.c7 {
+  position: absolute;
+  right: 8rem;
+}
+
+.c8 {
+  font-weight: 600;
+  font-size: 20px;
+  color: #383838;
+}
+
+.c0 {
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-rows: 100px auto 100px;
+  grid-template-areas: 'styleOne' 'styleTwo' 'styleThree';
+  background-color: #f8f8f8;
+}
+
+.c1 {
+  grid-area: styleOne;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 3rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-bottom: 1px solid;
+}
+
+.c3 ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.c3 ul li + li {
+  margin-left: 1rem;
+}
+
+.c4 {
+  border: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  -webkit-transition: filter 0.1s;
+  transition: filter 0.1s;
+  background-color: transparent;
+  color: #383838;
+}
+
+.c4:hover {
+  -webkit-filter: brightness(0.1);
+  filter: brightness(0.1);
+  cursor: pointer;
+}
+
+.c5 {
+  grid-area: styleTwo;
+  margin-top: 33px;
+}
+
+.c6 {
+  grid-area: styleThree;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c6 section {
+  position: initial;
+}
+
+@media (max-width:975px) {
+  .c7 {
+    margin-top: 3rem;
+    margin-right: -1rem;
+  }
+}
+
+<body>
+    <div>
+      <section
+        class="c0"
+      >
+        <header
+          class="c1"
+        >
+          <section
+            class=""
+          >
+            <h1
+              class="c2"
+            >
+              Blouse
+            </h1>
+          </section>
+          <nav
+            class="c3"
+          >
+            <ul>
+              <li>
+                <button
+                  class="c4"
+                >
+                  Lista
+                </button>
+              </li>
+              <li>
+                <button
+                  class="c4"
+                >
+                  Sair
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <main
+          class="c5"
+        />
+        <footer
+          class="c6"
+        >
+          <section
+            class="c7"
+          >
+            <p
+              class="c8"
+            >
+              © 
+              2022
+               | Carlos Oliveira
+            </p>
+          </section>
+        </footer>
+      </section>
+    </div>
+    <div>
+      <section
+        class="c0"
+      >
+        <header
+          class="c1"
+        >
+          <section
+            class=""
+          >
+            <h1
+              class="c2"
+            >
+              Blouse
+            </h1>
+          </section>
+          <nav
+            class="c3"
+          >
+            <ul>
+              <li>
+                <button
+                  class="c4"
+                >
+                  Lista
+                </button>
+              </li>
+              <li>
+                <button
+                  class="c4"
+                >
+                  Sair
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <main
+          class="c5"
+        />
+        <footer
+          class="c6"
+        >
+          <section
+            class="c7"
+          >
+            <p
+              class="c8"
+            >
+              © 
+              2022
+               | Carlos Oliveira
+            </p>
+          </section>
+        </footer>
+      </section>
+    </div>
+  </body>,
+  "container": .c2 {
+  color: #0000;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 2.5rem;
+  line-height: 1.2em;
+  text-shadow: 0 0 #383838,0 1.2em #383838;
+}
+
+.c2:hover {
+  text-shadow: 0 -1.2em #383838,0 0 #383838;
+}
+
+.c7 {
+  position: absolute;
+  right: 8rem;
+}
+
+.c8 {
+  font-weight: 600;
+  font-size: 20px;
+  color: #383838;
+}
+
+.c0 {
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-rows: 100px auto 100px;
+  grid-template-areas: 'styleOne' 'styleTwo' 'styleThree';
+  background-color: #f8f8f8;
+}
+
+.c1 {
+  grid-area: styleOne;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 3rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-bottom: 1px solid;
+}
+
+.c3 ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.c3 ul li + li {
+  margin-left: 1rem;
+}
+
+.c4 {
+  border: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  -webkit-transition: filter 0.1s;
+  transition: filter 0.1s;
+  background-color: transparent;
+  color: #383838;
+}
+
+.c4:hover {
+  -webkit-filter: brightness(0.1);
+  filter: brightness(0.1);
+  cursor: pointer;
+}
+
+.c5 {
+  grid-area: styleTwo;
+  margin-top: 33px;
+}
+
+.c6 {
+  grid-area: styleThree;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c6 section {
+  position: initial;
+}
+
+@media (max-width:975px) {
+  .c7 {
+    margin-top: 3rem;
+    margin-right: -1rem;
+  }
+}
+
+<div>
+    <section
+      class="c0"
+    >
+      <header
+        class="c1"
+      >
+        <section
+          class=""
+        >
+          <h1
+            class="c2"
+          >
+            Blouse
+          </h1>
+        </section>
+        <nav
+          class="c3"
+        >
+          <ul>
+            <li>
+              <button
+                class="c4"
+              >
+                Lista
+              </button>
+            </li>
+            <li>
+              <button
+                class="c4"
+              >
+                Sair
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main
+        class="c5"
+      />
+      <footer
+        class="c6"
+      >
+        <section
+          class="c7"
+        >
+          <p
+            class="c8"
+          >
+            © 
+            2022
+             | Carlos Oliveira
+          </p>
+        </section>
+      </footer>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
